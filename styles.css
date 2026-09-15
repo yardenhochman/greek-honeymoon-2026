@@ -1801,3 +1801,8 @@ button {
 .guide-section > .trip-photo { max-width: 960px; }
 .photo-context { font-size: .9rem; color: var(--ink-soft); }
 @media(max-width:680px) { .trip-photo-pair { grid-template-columns:1fr; gap: 0; } }
+
+.day-guide-link { display:flex; flex-direction:column; gap:6px; padding:16px 20px; margin:16px 0 22px; border:1px solid var(--line); border-radius:12px; background:#f3ead5; color:var(--ink); text-decoration:none; }
+.day-guide-link strong { font-size:1.1rem; }
+.day-guide-link span { font-size:.95rem; }
+.day-guide-link:hover,.day-guide-link:focus-visible { background:#ebdfbf; outline:2px solid var(--ink); outline-offset:3px; }

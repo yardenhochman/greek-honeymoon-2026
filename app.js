@@ -577,6 +577,7 @@ function createDayCard(day) {
       <span class="day-status">${day.status}</span>
     </div>
     <p class="day-summary">${day.summary}</p>
+    <a class="day-guide-link" href="./day-${String(day.id).padStart(2, "0")}.html"><strong>${day.location} · day guide →</strong><span>Food, experiences, transport & hotel services</span></a>
     <div class="day-metrics" aria-label="Day at a glance">${metrics}</div>
     <div class="day-detail-grid">
       <div class="day-plan">
@@ -609,7 +610,7 @@ function createDayCard(day) {
             <div><dt>Room</dt><dd>${hotel.room}</dd></div>
           </dl>
           <p class="hotel-note">${hotel.note}</p>
-          <a class="tool-link" href="./practical.html#stay-${({1:0,2:1,3:1,4:2,5:3,6:4,7:5,8:6,9:6,10:7,11:7})[day.id]}">Laundry, services & contact →</a>
+          <a class="tool-link" href="./day-${String(day.id).padStart(2, "0")}.html#hotels">Laundry, services & contact →</a>
         </section>
       </div>
     </div>
