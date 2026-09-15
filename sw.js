@@ -1,5 +1,5 @@
-const CACHE = "greek-honeymoon-public-2026-09-15-v1";
-const FILES = ["./", "./index.html", "./app.js", "./styles.css", "./manifest.webmanifest", "./icon.svg", "./icon-192.png", "./icon-512.png", "./assets/map-day-01.png", "./assets/map-day-02.png", "./assets/map-day-03.png", "./assets/map-day-04.png", "./assets/map-day-05.png", "./assets/map-day-06.png", "./assets/map-day-07.png", "./assets/map-day-08.png", "./assets/map-day-10.png", "./assets/map-day-11.png"];
+const CACHE = "greek-honeymoon-public-2026-09-15-v2";
+const FILES = ["./practical.html", "./experiences.html", "./phone.js", "./", "./index.html", "./app.js", "./styles.css", "./manifest.webmanifest", "./icon.svg", "./icon-192.png", "./icon-512.png", "./assets/map-day-01.png", "./assets/map-day-02.png", "./assets/map-day-03.png", "./assets/map-day-04.png", "./assets/map-day-05.png", "./assets/map-day-06.png", "./assets/map-day-07.png", "./assets/map-day-08.png", "./assets/map-day-10.png", "./assets/map-day-11.png"];
 const urls = new Set(FILES.map(path => new URL(path, self.registration.scope).href));
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)));
