@@ -1,7 +1,8 @@
 const phoneTools = document.querySelector(".phone-tools");
 const offlineStatus = document.querySelector("[data-offline-status]");
 const updateButton = document.querySelector("[data-update]");
-let savedOffline = false;
+// An installed app already has a home-screen entry; suppress install guidance immediately.
+let savedOffline = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
 function refreshPhoneTools() {
   // Once the plan is cached, only a real pending update needs attention.
   phoneTools.hidden = savedOffline && updateButton.hidden;
@@ -11,6 +12,7 @@ function refreshPhoneTools() {
 }
 let installPrompt;
 const installButton = document.querySelector("[data-install]");
+refreshPhoneTools();
 window.addEventListener("beforeinstallprompt", event => {
   event.preventDefault(); installPrompt = event; installButton.hidden = savedOffline;
 });
@@ -26,7 +28,16 @@ if ("serviceWorker" in navigator && window.isSecureContext) {
     if (hadController) window.location.reload();
     hadController = true;
   });
-  navigator.serviceWorker.register("./sw.js").then(registration => {
+  navigator.serviceWorker.register("./sw.js", { updateViaCache: "none" }).then(registration => {
+    // Installed apps often resume an existing page instead of navigating again.
+    const checkForUpdate = () => {
+      if (navigator.onLine) registration.update().catch(() => {});
+    };
+    window.addEventListener("pageshow", checkForUpdate);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") checkForUpdate();
+    });
+    checkForUpdate();
     const showUpdate = () => {
       updateButton.hidden = !registration.waiting;
       refreshPhoneTools();
