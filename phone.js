@@ -60,3 +60,11 @@ if ("serviceWorker" in navigator && window.isSecureContext) {
     window.addEventListener("offline", refreshStatus);
   }).catch(() => { status.textContent = "Offline saving is unavailable. Use Print plan to keep a PDF copy."; });
 }
+
+// External publisher photos remain linked when unavailable offline.
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && !image.src.startsWith(location.origin + '/')) {
+    image.style.display = 'none';
+  }
+}, true);

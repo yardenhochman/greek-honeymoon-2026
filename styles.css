@@ -1806,3 +1806,24 @@ button {
 .day-guide-link strong { font-size:1.1rem; }
 .day-guide-link span { font-size:.95rem; }
 .day-guide-link:hover,.day-guide-link:focus-visible { background:#ebdfbf; outline:2px solid var(--ink); outline-offset:3px; }
+
+.language-toggle { border:1px solid currentColor; border-radius:20px; padding:9px 14px; background:transparent; color:var(--ink); font:inherit; cursor:pointer; justify-self:end; }
+.site-header { grid-template-columns:auto 1fr auto auto; gap:14px; }
+.guide-page .site-header { grid-template-columns:1fr auto; }
+.guide-nav { flex-wrap:nowrap; gap:12px; justify-content:space-between; align-items:center; }
+.guide-nav a { white-space:nowrap; font-size:clamp(.75rem,2.8vw,1rem); }
+.guide-nav[aria-label="Day navigation"],.guide-nav[aria-label="מעבר בין ימים"] { padding-block:10px; }
+html[dir="rtl"] body { font-family:Arial,"Alegreya Sans",sans-serif; }
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4 { font-family:Arial,sans-serif; letter-spacing:normal; }
+html[dir="rtl"] .eyebrow,html[dir="rtl"] .day-date,html[dir="rtl"] .chapter-dates { letter-spacing:normal; }
+html[dir="rtl"] .day-card,html[dir="rtl"] .practical-card { text-align:start; }
+a[href^="tel:"],.hotel-times strong,.day-time { unicode-bidi:plaintext; }
+@media(max-width:680px) { .guide-nav { padding-inline:14px; gap:8px; } .site-header { gap:8px; } .language-toggle { padding:8px 10px; font-size:14px; } }
+
+.packing-list { padding-inline-start: 1.3em; line-height: 1.7; }
+.packing-list li + li { margin-top: .8em; }
+@media(max-width:380px) { .guide-nav a { font-size: .7rem; } }
+.practical-card .trip-photo img { height:240px; object-fit:contain; background:#efe7d8; }
+.playlist-tracks { padding-inline-start:1.4em; line-height:1.7; }
+.playlist-tracks li + li { margin-top:.6em; }
+html[dir="rtl"] .playlist-tracks a { unicode-bidi:plaintext; }

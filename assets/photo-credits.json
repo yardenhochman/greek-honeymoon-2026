@@ -1,0 +1,72 @@
+[
+  {
+    "key": "gemista",
+    "source": "https://commons.wikimedia.org/wiki/File:Gemista.jpg",
+    "artist": "Photo and cooking: Badseed",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  {
+    "key": "fava",
+    "source": "https://commons.wikimedia.org/wiki/File:Greek_fava.jpg",
+    "artist": "I am the photographer and the chef!",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  {
+    "key": "tomatokeftedes",
+    "source": "https://commons.wikimedia.org/wiki/File:Tomato_fritters_of_Santorini_(Tomatokeftedes).jpg",
+    "artist": "Sam Holt",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "key": "kournas",
+    "source": "https://commons.wikimedia.org/wiki/File:Lake_Kournas_Sunrise_01.jpg",
+    "artist": "Anton Zelenov",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "key": "rethymno",
+    "source": "https://commons.wikimedia.org/wiki/File:Rethymno_old_harbour_lighthouse_1.jpg",
+    "artist": "Anton Zelenov",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "key": "loutro",
+    "source": "https://commons.wikimedia.org/wiki/File:Loutro_(Chania)-01.jpg",
+    "artist": "Maesi64",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  {
+    "key": "preveli",
+    "source": "https://commons.wikimedia.org/wiki/File:Preveli_Palm_Beach_01.JPG",
+    "artist": "Uoaei1",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "key": "dakos",
+    "source": "https://commons.wikimedia.org/wiki/File:Plat_de_Dakos_en_Cr%C3%A8te_en_juillet_2021.jpg",
+    "artist": "Benoît Prieur",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  {
+    "key": "horta",
+    "source": "https://commons.wikimedia.org/wiki/File:Vrasta_horta.jpg",
+    "artist": "Sotiria Simota",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  {
+    "key": "briam",
+    "source": "https://commons.wikimedia.org/wiki/File:Briam.jpg",
+    "artist": "Dianeira",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  }
+]

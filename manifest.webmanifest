@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "Our Greek Honeymoon",
-  "short_name": "Our trip",
+  "name": "ירח הדבש שלנו · כרתים וסנטוריני",
+  "short_name": "הטיול שלנו",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -24,5 +24,7 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "lang": "he",
+  "dir": "rtl"
 }

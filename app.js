@@ -7,9 +7,9 @@ const tripDays = [
     location: "Heraklion",
     status: "Booked",
     color: "#c86643",
-    summary: "An intentionally empty arrival night: land, taxi, check in and sleep.",
+    summary: "Land, find a tasty simple dinner near the hotel, then check in and rest.",
     metrics: ["~4 km taxi", "~10 min transfer", "Late check-in"],
-    note: "Keep the hotel confirmation and address handy for the taxi; there is no need to plan dinner after landing.",
+    note: "Keep the hotel confirmation and address handy for the taxi; ask about a nearby kitchen still serving after landing.",
     stay: "Poseidon Hotel",
     hotel: {
       label: "Tonight",
@@ -39,7 +39,7 @@ const tripDays = [
     location: "Heraklion → Chania",
     status: "Booked",
     color: "#e3a942",
-    summary: "Collect the little car, cross northern Crete and let Chania set the honeymoon pace.",
+    summary: "Collect the car, stop for a special lunch in Rethymno, then settle into Chania.",
     metrics: ["~140 km drive", "~2h15 direct", "Easy afternoon"],
     note: "At pickup, photograph every side of the car, confirm the fuel policy and ask SK Rent to explain the exact return procedure.",
     stay: "Polixeny’s Suites · night 1 of 2",
@@ -55,8 +55,9 @@ const tripDays = [
     mapsQuery: "Polixeny's Suites, Chania, Greece",
     events: [
       ["10:00", "Pick up from SK Rent", "Heraklion Airport · bring the reservation voucher"],
-      ["10:30–13:00", "Drive west to Chania", "About 140 km · roughly 2h15 direct, plus any coffee stop"],
-      ["Afternoon", "Check in and wander", "Allow 2–3 hours for Old Town, Venetian harbour and an easy dinner"]
+      ["10:30–12:30", "Drive to Rethymno", "Allow time for rental pickup, parking and the walk into the old town"],
+      ["12:30–14:30", "A proper first lunch", "Raki BaRaki or an arranged Avli lunch; allow time for a short wander"],
+      ["15:30–16:30", "Arrive in Chania", "Estimated arrival after lunch and the onward drive; check in and enjoy an easy evening"]
     ],
     points: [
       { name: "Heraklion Airport", coords: [35.337058, 25.180972], type: "fixed" },
@@ -135,7 +136,7 @@ const tripDays = [
       checkOut: "Mon 21 · 07:00–12:00",
       room: "Deluxe Double · balcony + sea view",
 
-      note: "Property arranges free transfer to and from Loutro"
+      note: "Coordinate the boat transfer with the property; timing and availability need confirmation"
     },
     mapsQuery: "Lykos Beach, Sfakia, Crete",
     plans: [
@@ -364,7 +365,7 @@ const tripDays = [
     color: "#2d7f91",
     summary: "An early ferry earns a full arrival day in Perissa with nothing urgent after check-in.",
     metrics: ["1h35 ferry", "~35 min transfer", "No car"],
-    note: "Complete SeaJets check-in online, keep the QR tickets offline and arrange the Athinios-to-Perissa transfer before travel day.",
+    note: "Complete SeaJets check-in online and keep the QR tickets offline. A normal taxi from Athinios to Perissa is an option; have the hotel address ready.",
     stay: "Roula Villa · Perissa · night 1 of 2",
     hotel: {
       label: "Tonight · night 1 of 2",
@@ -577,7 +578,7 @@ function createDayCard(day) {
       <span class="day-status">${day.status}</span>
     </div>
     <p class="day-summary">${day.summary}</p>
-    <a class="day-guide-link" href="./day-${String(day.id).padStart(2, "0")}.html"><strong>${day.location} · day guide →</strong><span>Food, experiences, transport & hotel services</span></a>
+    <a class="day-guide-link" href="./day-${String(day.id).padStart(2, "0")}.html"><strong>${day.location} · day guide →</strong><span>Food, activities, packing & practical details</span></a>
     <div class="day-metrics" aria-label="Day at a glance">${metrics}</div>
     <div class="day-detail-grid">
       <div class="day-plan">
