@@ -1080,5 +1080,7 @@ window.TRIP_HE = {
   "Checklist": "הרשימה",
   "Bags": "התיקים",
   "Packing notes": "דגשים לאריזה",
-  "Sunglasses": "משקפי שמש"
+  "Sunglasses": "משקפי שמש",
+  "Electric toothbrush, brush-head cover and compact personal toiletries; charge before departure": "מברשת שיניים חשמלית, כיסוי לראש וכלי רחצה אישיים קומפקטיים; להטעין לפני היציאה",
+  "Matching electric-toothbrush charger; omit only if a full charge reliably lasts the entire 11-day trip": "מטען מתאים למברשת השיניים החשמלית; אפשר לוותר רק אם טעינה מלאה מספיקה בוודאות לכל 11 ימי הטיול"
 };

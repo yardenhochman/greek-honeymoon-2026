@@ -153,7 +153,7 @@
       "id": "yarden-brush",
       "owner": "yarden",
       "bag": "yarden-bag",
-      "label": "Toothbrush and a compact personal toiletry pouch"
+      "label": "Electric toothbrush, brush-head cover and compact personal toiletries; charge before departure"
     },
     {
       "id": "yarden-liquids",
@@ -400,6 +400,12 @@
       "owner": "adi",
       "bag": "adi-case",
       "label": "Wedding accessories and a small makeup / hair kit, if wanted"
+    },
+    {
+      "id": "yarden-toothbrush-charger",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "Matching electric-toothbrush charger; omit only if a full charge reliably lasts the entire 11-day trip"
     }
   ],
   "notes": [
