@@ -1079,5 +1079,6 @@ window.TRIP_HE = {
   "Sofia and Astoria confirmed beach towels; other stays are unconfirmed. None of Sofia, Astoria or Roula offers in-house laundry, but they recommend nearby laundries. Prices and turnaround still need checking, so the packing quantities do not rely on a laundry service.": "סופיה ואסטוריה אישרו מגבות לים; בשאר השהיות אין אישור. בסופיה, באסטוריה וברולה אין כביסה בתוך המלון, אך הם מפנים למכבסות סמוכות. עדיין צריך לברר מחירים וזמני החזרה, ולכן כמויות הבגדים אינן תלויות בשירות כביסה.",
   "Checklist": "הרשימה",
   "Bags": "התיקים",
-  "Packing notes": "דגשים לאריזה"
+  "Packing notes": "דגשים לאריזה",
+  "Sunglasses": "משקפי שמש"
 };
