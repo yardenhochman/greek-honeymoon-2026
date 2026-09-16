@@ -30,7 +30,7 @@ for day in D['days']:
   cards=[]
   for key,title in [('before','Before you go'),('pack','Bring along')]:
    cards.append('<article class="practical-card"><h3>'+title+'</h3><ul class="packing-list">'+''.join('<li>'+html.escape(item)+'</li>' for item in prep[key])+'</ul></article>')
-  body+=section('prepare','Prepare & pack',grid(cards)+'<p class="source-note">Preparation lists are suggestions for the chosen route. Beach-towel availability is not yet confirmed; bring a compact towel until the hotel confirms.</p>')
+  body+=section('prepare','Prepare & pack',grid(cards)+'<p>'+link('./packing.html','Packing checklist →')+'</p><p class="source-note">Beach towels are confirmed at Sofia and Astoria. Bring a compact towel for other stays where they are not confirmed.</p>')
  useful=[D['car'] if k=='car' else D['shared'][k] for k in day['transport']]+[D['documents'][n] for n in day['documents']]
  if useful:body+=section('useful','Useful today',grid(useful)+'<p>Private Drive links require your Google account. Save documents offline separately in Drive.</p>')
  else:body+=section('useful','Useful today','<p>'+link(f'./index.html#day-{i}','Today’s route, times & options →')+link('./practical.html#documents','All travel documents →')+'</p>')
@@ -45,3 +45,19 @@ for n,stay in enumerate(D['stays']):
 docs=D['documentsIntro']+grid(D['documents'])+'</section>'
 render('practical.html','Documents & essentials.','Our shared documents stay here. Contacts, laundry and transport are collected in the relevant day guide.',docs+section('days','Practical details by day',directory())+section('services','Hotel shortcuts',grid(stay_links)))
 print('Built 11 day guides and 2 general hubs.')
+
+# Packing keeps stable item IDs so a content update preserves checked items.
+P=json.loads((ROOT/'packing-content.json').read_text())
+def packing_card(title,items,view):
+ rows=[]
+ for item in items:
+  ident=f'pack-{view}-{item["id"]}'
+  rows.append(f'<li><label for="{ident}"><input type="checkbox" id="{ident}" data-pack-item="{item["id"]}"><span><span class="pack-label">{html.escape(item["label"])}</span><small>{html.escape(P["bags"][item["bag"]]["label"] if view=="person" else P["groups"][item["owner"]])}</small></span></label></li>')
+ return '<article class="practical-card"><h3>'+html.escape(title)+'</h3><ul class="pack-checklist">'+''.join(rows)+'</ul></article>'
+packing='<nav class="guide-nav" aria-label="Packing">'+link('#checklist','Checklist')+link('#bags','Bags')+link('#packing-notes','Packing notes')+'</nav><section class="section-shell guide-section" id="bags"><h2>Bags & weight limits</h2>'+''.join('<p>'+html.escape(n)+'</p>' for n in P['notes'][:2])+grid([f'<article class="practical-card"><h3>{html.escape(b["label"])}</h3><p>{html.escape(b["description"])}</p></article>' for b in P['bags'].values()])+'</section>'
+packing+='<section class="section-shell guide-section" id="checklist"><h2>Packing</h2><div class="pack-controls" role="group" aria-label="Packing view"><button type="button" data-pack-view="person" aria-pressed="true">By person</button><button type="button" data-pack-view="bag" aria-pressed="false">By bag</button><p role="status"><span>Packed</span> <b data-pack-count>0</b> <span>of</span> <b>'+str(len(P['items']))+'</b></p></div><p data-pack-storage>Checkmarks stay on this device and browser; they are not shared between phones.</p>'
+for view,groups in [('person',P['groups']),('bag',{k:v['label'] for k,v in P['bags'].items()})]:
+ packing+=f'<div data-pack-panel="{view}"'+(' hidden' if view=='bag' else '')+'>'+grid([packing_card(label,[i for i in P['items'] if i['owner' if view=='person' else 'bag']==key],view) for key,label in groups.items()])+'</div>'
+packing+='</section>'+section('packing-notes','Before closing the bags','<ul class="packing-list">'+''.join('<li>'+html.escape(n)+'</li>' for n in P['notes'][2:])+'</ul>')
+packing+=section('packing-sources','Sources checked 16 Sep 2026','<div class="tool-links">'+link('https://www.bluebirdair.com/TRAVEL-INFORMATION/Checked-baggage','Airline baggage rules ↗')+link('https://booking.bluebirdair.com/Travel-information/Lithium-Battery-Allowance-and-Dangerous-Goods','Airline battery rules ↗')+link('https://transport.ec.europa.eu/transport-modes/air/aviation-security/aviation-security-policy/liquids-aerosols-and-gels_en','EU liquids rules ↗')+link('https://drive.google.com/file/d/18w86zU1xVx-NhHdnHLqbRzQyinC8OjVc/view','Original flight ticket · private Drive ↗')+'</div>')
+render('packing.html',P['title'],P['intro'],packing+'<script src="./packing.js"></script>')

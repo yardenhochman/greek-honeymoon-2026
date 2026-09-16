@@ -1,0 +1,417 @@
+{
+  "title": "Pack for our honeymoon",
+  "intro": "One shared list, a personal list for each of us, and a place for everything in the bags. Quantities cover 10 nights, beaches, walking and the wedding.",
+  "groups": {
+    "shared": "Shared equipment",
+    "yarden": "Yarden’s list",
+    "adi": "Adi’s list"
+  },
+  "bags": {
+    "yarden-case": {
+      "label": "Yarden’s trolley",
+      "description": "Up to 8 kg including the bag · maximum 55 × 40 × 23 cm. Personal clothes, shoes and part of the shared equipment."
+    },
+    "adi-case": {
+      "label": "Adi’s trolley",
+      "description": "Up to 8 kg including the bag · maximum 55 × 40 × 23 cm. Personal clothes, wedding outfit and the lighter shared items."
+    },
+    "yarden-bag": {
+      "label": "Yarden’s small backpack",
+      "description": "Up to 4 kg · maximum 40 × 30 × 18 cm, fitting under the seat. Documents, electronics and accessible essentials."
+    },
+    "adi-bag": {
+      "label": "Adi’s small backpack",
+      "description": "Up to 4 kg · maximum 40 × 30 × 18 cm, fitting under the seat. Personal essentials, a change of clothes and snacks."
+    },
+    "wear": {
+      "label": "Wear on the flight",
+      "description": "Wear the walking shoes and a light layer; keep pockets comfortable and valuables accessible."
+    }
+  },
+  "items": [
+    {
+      "id": "shared-power",
+      "owner": "shared",
+      "bag": "yarden-bag",
+      "label": "1 power bank + charging cable; keep in the cabin, even if a trolley is gate-checked"
+    },
+    {
+      "id": "shared-chargers",
+      "owner": "shared",
+      "bag": "yarden-bag",
+      "label": "1 compact multi-port charger + 2 phone cables"
+    },
+    {
+      "id": "shared-car-charge",
+      "owner": "shared",
+      "bag": "yarden-bag",
+      "label": "1 USB car charger and a compatible cable for navigation"
+    },
+    {
+      "id": "shared-adapter",
+      "owner": "shared",
+      "bag": "yarden-bag",
+      "label": "1 compact travel adapter compatible with European sockets and your plugs"
+    },
+    {
+      "id": "shared-firstaid",
+      "owner": "shared",
+      "bag": "yarden-bag",
+      "label": "Small first-aid pouch: plasters, blister dressings, antiseptic wipes"
+    },
+    {
+      "id": "shared-sun",
+      "owner": "shared",
+      "bag": "adi-bag",
+      "label": "Travel-size sunscreen for arrival; buy a larger supply locally if needed"
+    },
+    {
+      "id": "shared-dental",
+      "owner": "shared",
+      "bag": "adi-bag",
+      "label": "1 travel-size toothpaste to share"
+    },
+    {
+      "id": "shared-wash",
+      "owner": "shared",
+      "bag": "yarden-case",
+      "label": "Small shared wash kit: solid soap / small shampoo and a little laundry soap"
+    },
+    {
+      "id": "shared-bags",
+      "owner": "shared",
+      "bag": "adi-case",
+      "label": "2 lightweight laundry bags + 2 bags for wet swimwear"
+    },
+    {
+      "id": "shared-drybag",
+      "owner": "shared",
+      "bag": "yarden-case",
+      "label": "1 small waterproof bag for boats and beach outings"
+    },
+    {
+      "id": "shared-beachbag",
+      "owner": "shared",
+      "bag": "adi-case",
+      "label": "1 foldable beach / shopping tote; packed inside an allowed bag at the airport"
+    },
+    {
+      "id": "shared-scale",
+      "owner": "shared",
+      "bag": "yarden-case",
+      "label": "1 small luggage scale, if you already have one"
+    },
+    {
+      "id": "shared-snacks",
+      "owner": "shared",
+      "bag": "adi-bag",
+      "label": "A few familiar travel snacks for the flight and early ferry"
+    },
+    {
+      "id": "shared-honeymoon",
+      "owner": "shared",
+      "bag": "adi-case",
+      "label": "Optional: a small note or surprise for the trip"
+    },
+    {
+      "id": "yarden-passport",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "Passport, wallet and payment card; saved travel documents on the phone"
+    },
+    {
+      "id": "yarden-phone",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "Phone + headphones"
+    },
+    {
+      "id": "yarden-meds",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "Personal medication and other daily essentials, if used"
+    },
+    {
+      "id": "yarden-glasses",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "Sunglasses; prescription glasses / contact lenses if used"
+    },
+    {
+      "id": "yarden-bottle",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "1 reusable water bottle; empty it before security when required"
+    },
+    {
+      "id": "yarden-spare",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "1 light change of clothes + underwear, counted within the totals below"
+    },
+    {
+      "id": "yarden-brush",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "Toothbrush and a compact personal toiletry pouch"
+    },
+    {
+      "id": "yarden-liquids",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "1 transparent resealable liquids bag, up to 1 litre; containers up to 100 ml"
+    },
+    {
+      "id": "yarden-tops",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "5–6 light tops in total, including the flight outfit and spare set"
+    },
+    {
+      "id": "yarden-bottoms",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "2–3 versatile bottoms in total: shorts / trousers / skirts, as preferred"
+    },
+    {
+      "id": "yarden-underwear",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "11 pairs of underwear in total; no need to rely on hotel laundry"
+    },
+    {
+      "id": "yarden-socks",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "5–6 pairs of socks, including a suitable pair for the gorge walk"
+    },
+    {
+      "id": "yarden-sleep",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "1 lightweight sleepwear set"
+    },
+    {
+      "id": "yarden-swim",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "2 swimsuits, so one can dry while the other is used"
+    },
+    {
+      "id": "yarden-towel",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "1 compact quick-drying beach towel for stays other than Sofia and Astoria, where towels are confirmed"
+    },
+    {
+      "id": "yarden-sandals",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "1 pair of light sandals / flip-flops"
+    },
+    {
+      "id": "yarden-watershoes",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "Optional: water shoes if you like them for pebbly beaches"
+    },
+    {
+      "id": "yarden-wedding",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "1 complete wedding outfit, folded together in its own pouch"
+    },
+    {
+      "id": "yarden-dress-shoes",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "Wedding shoes only if your packed sandals / shoes do not suit the outfit"
+    },
+    {
+      "id": "yarden-hat",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "1 packable sun hat"
+    },
+    {
+      "id": "yarden-walk-shoes",
+      "owner": "yarden",
+      "bag": "wear",
+      "label": "Comfortable walking shoes with grip; use the same pair for travel and the gorge"
+    },
+    {
+      "id": "yarden-layer",
+      "owner": "yarden",
+      "bag": "wear",
+      "label": "1 light long-sleeved layer for the plane, ferry and breezy evenings"
+    },
+    {
+      "id": "adi-passport",
+      "owner": "adi",
+      "bag": "adi-bag",
+      "label": "Passport, wallet and payment card; saved travel documents on the phone"
+    },
+    {
+      "id": "adi-phone",
+      "owner": "adi",
+      "bag": "adi-bag",
+      "label": "Phone + headphones"
+    },
+    {
+      "id": "adi-meds",
+      "owner": "adi",
+      "bag": "adi-bag",
+      "label": "Personal medication and other daily essentials, if used"
+    },
+    {
+      "id": "adi-glasses",
+      "owner": "adi",
+      "bag": "adi-bag",
+      "label": "Sunglasses; prescription glasses / contact lenses if used"
+    },
+    {
+      "id": "adi-bottle",
+      "owner": "adi",
+      "bag": "adi-bag",
+      "label": "1 reusable water bottle; empty it before security when required"
+    },
+    {
+      "id": "adi-spare",
+      "owner": "adi",
+      "bag": "adi-bag",
+      "label": "1 light change of clothes + underwear, counted within the totals below"
+    },
+    {
+      "id": "adi-brush",
+      "owner": "adi",
+      "bag": "adi-bag",
+      "label": "Toothbrush and a compact personal toiletry pouch"
+    },
+    {
+      "id": "adi-liquids",
+      "owner": "adi",
+      "bag": "adi-bag",
+      "label": "1 transparent resealable liquids bag, up to 1 litre; containers up to 100 ml"
+    },
+    {
+      "id": "adi-tops",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "5–6 light tops in total, including the flight outfit and spare set"
+    },
+    {
+      "id": "adi-bottoms",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "2–3 versatile bottoms in total: shorts / trousers / skirts, as preferred"
+    },
+    {
+      "id": "adi-underwear",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "11 pairs of underwear in total; no need to rely on hotel laundry"
+    },
+    {
+      "id": "adi-socks",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "5–6 pairs of socks, including a suitable pair for the gorge walk"
+    },
+    {
+      "id": "adi-sleep",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "1 lightweight sleepwear set"
+    },
+    {
+      "id": "adi-swim",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "2 swimsuits, so one can dry while the other is used"
+    },
+    {
+      "id": "adi-towel",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "1 compact quick-drying beach towel for stays other than Sofia and Astoria, where towels are confirmed"
+    },
+    {
+      "id": "adi-sandals",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "1 pair of light sandals / flip-flops"
+    },
+    {
+      "id": "adi-watershoes",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "Optional: water shoes if you like them for pebbly beaches"
+    },
+    {
+      "id": "adi-wedding",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "1 complete wedding outfit, folded together in its own pouch"
+    },
+    {
+      "id": "adi-dress-shoes",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "Wedding shoes only if your packed sandals / shoes do not suit the outfit"
+    },
+    {
+      "id": "adi-hat",
+      "owner": "adi",
+      "bag": "adi-bag",
+      "label": "1 packable sun hat"
+    },
+    {
+      "id": "adi-walk-shoes",
+      "owner": "adi",
+      "bag": "wear",
+      "label": "Comfortable walking shoes with grip; use the same pair for travel and the gorge"
+    },
+    {
+      "id": "adi-layer",
+      "owner": "adi",
+      "bag": "wear",
+      "label": "1 light long-sleeved layer for the plane, ferry and breezy evenings"
+    },
+    {
+      "id": "yarden-driving",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "Driving documents required for the rental, rental voucher and the payment card used for the booking"
+    },
+    {
+      "id": "yarden-groom",
+      "owner": "yarden",
+      "bag": "yarden-case",
+      "label": "Compact personal grooming / shaving items, if needed"
+    },
+    {
+      "id": "adi-personal",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "Personal care, underwear / bras and period supplies as needed; keep a small accessible supply in the backpack"
+    },
+    {
+      "id": "adi-wedding-details",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "Wedding accessories and a small makeup / hair kit, if wanted"
+    }
+  ],
+  "notes": [
+    "The ticket issued 8 Sep confirms one 8 kg trolley per person on both flights. No checked suitcase is listed. This packing layout assumes two compliant trolleys and two small personal bags; the bags you own have not yet been measured.",
+    "Measure the packed bags including wheels and handles, and weigh each one separately. The allowance belongs to each bag/person; do not treat it as one shared 24 kg suitcase.",
+    "Suggested target: no more than 7.5 kg per trolley and 3.5 kg per backpack. These are packing targets, not measured weights. If an empty trolley weighs 3 kg, aim for about 4.5 kg of contents.",
+    "Use each backpack as the day bag during the trip. A full-size hiking backpack is not automatically a compliant personal item: measure it when packed.",
+    "At airport security on the return from Greece, keep ordinary liquids in containers of up to 100 ml, all fitting in one resealable transparent 1-litre bag per person. Put shared liquids into one of those two bags, not a third one.",
+    "Keep passports, valuables, essential medication and the power bank in the small bags. If a trolley is taken into the hold at the gate, remove batteries and electronics that need to remain in the cabin. Check your power bank against the airline’s battery rules.",
+    "Pack the first night’s sleepwear and wash kit near the top. Keep wedding outfits together and away from liquids; leave room rather than compressing them under shoes.",
+    "Before the Lykos overnight, ask Akrogiali where the car and large bags will stay. Prepare a small overnight pouch with the next day’s clothes, wash kit and beach items; transfer it into the day bags once on the ground.",
+    "Sofia and Astoria confirmed beach towels; other stays are unconfirmed. None of Sofia, Astoria or Roula offers in-house laundry, but they recommend nearby laundries. Prices and turnaround still need checking, so the packing quantities do not rely on a laundry service.",
+    "If space is tight: remove optional water shoes, duplicate chargers, extra footwear and full-size toiletries first. A laptop, hairdryer and bulky beach blanket are not part of the base list."
+  ]
+}

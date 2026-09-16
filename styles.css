@@ -1827,3 +1827,20 @@ a[href^="tel:"],.hotel-times strong,.day-time { unicode-bidi:plaintext; }
 .playlist-tracks { padding-inline-start:1.4em; line-height:1.7; }
 .playlist-tracks li + li { margin-top:.6em; }
 html[dir="rtl"] .playlist-tracks a { unicode-bidi:plaintext; }
+/* Packing: shared checkmarks across person/bag views, generous phone targets. */
+.pack-controls { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-block:20px; }
+.pack-controls button { font:inherit; color:var(--ink); background:transparent; border:1px solid var(--ink); border-radius:24px; padding:10px 18px; cursor:pointer; }
+.pack-controls button[aria-pressed="true"] { background:var(--ink); color:#fff; }
+.pack-controls p { margin:0; }
+.pack-checklist { list-style:none; padding:0; margin:0; }
+.pack-checklist li { border-bottom:1px solid var(--line); }
+.pack-checklist label { display:flex; align-items:flex-start; gap:12px; padding-block:14px; cursor:pointer; line-height:1.55; }
+.pack-checklist input { flex:0 0 22px; width:22px; height:22px; margin:3px 0 0; accent-color:var(--ink); }
+.pack-checklist label > span { min-width:0; }
+.pack-checklist small { display:block; color:var(--ink-soft); margin-top:6px; font-size:.8rem; }
+.pack-checklist .is-packed .pack-label { text-decoration:line-through; opacity:.65; }
+[data-pack-panel][hidden] { display:none; }
+.pack-controls button:focus-visible,.pack-checklist input:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+@media print { .pack-controls button { display:none; } .pack-checklist label { break-inside:avoid; } }
+.pack-checklist label > span,.pack-checklist .pack-label { color:var(--ink); font-family:inherit; font-size:1rem; letter-spacing:normal; }
+body:has([data-pack-panel]) .practical-card h3 { margin-top:0; }
