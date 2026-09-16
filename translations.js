@@ -1082,5 +1082,20 @@ window.TRIP_HE = {
   "Packing notes": "דגשים לאריזה",
   "Sunglasses": "משקפי שמש",
   "Electric toothbrush, brush-head cover and compact personal toiletries; charge before departure": "מברשת שיניים חשמלית, כיסוי לראש וכלי רחצה אישיים קומפקטיים; להטעין לפני היציאה",
-  "Matching electric-toothbrush charger; omit only if a full charge reliably lasts the entire 11-day trip": "מטען מתאים למברשת השיניים החשמלית; אפשר לוותר רק אם טעינה מלאה מספיקה בוודאות לכל 11 ימי הטיול"
+  "Matching electric-toothbrush charger; omit only if a full charge reliably lasts the entire 11-day trip": "מטען מתאים למברשת השיניים החשמלית; אפשר לוותר רק אם טעינה מלאה מספיקה בוודאות לכל 11 ימי הטיול",
+  "Complete wedding outfit, including wedding trousers, folded together in one pouch": "הופעה שלמה לחתונה, כולל המכנסיים לחתונה, מקופלת יחד בנרתיק אחד",
+  "Sunglasses from the car; prescription glasses / contact lenses only if used": "משקפי השמש מהרכב; משקפי ראייה / עדשות רק אם משתמשים",
+  "Sandals, if a different pair from your Shoresh sandals": "סנדלים, אם זה זוג נפרד מסנדלי השורש",
+  "Personal medication and regular supplements": "תרופות ותוספים קבועים אישיים",
+  "Clothes for sleeping, if needed: a thin T-shirt and shorts or light pyjamas": "בגדים לשינה, אם צריך: חולצה דקה ומכנסיים קצרים או פיג׳מה דקה",
+  "Personal deodorant: a stick or travel-size container": "דאודורנט אישי: סטיק או מכל בגודל נסיעות",
+  "Compatible watch charger(s), one for each different watch connection in use": "מטען לשעון / לשעונים, לפי החיבור המתאים לכל שעון שמביאים",
+  "Comb / hairbrush": "מסרק / מברשת שיער",
+  "1–2 everyday dresses, replacing part of the tops/bottoms allowance to save space": "שמלה או שתיים ליומיום, במקום חלק מהחולצות / המכנסיים כדי לחסוך מקום",
+  "Flip-flops": "כפכפים",
+  "Shoresh sandals; count only one pair if these are also your regular sandals": "סנדלי שורש; לספור זוג אחד אם אלה גם הסנדלים הרגילים",
+  "Makeup sponge": "ספוגית איפור",
+  "Lipstick / lip balm, as preferred": "שפתון / שפתון לחות, לפי ההעדפה",
+  "Private personal pouch — check its contents together before closing the bags": "נרתיק אישי פרטי — לבדוק יחד את התכולה לפני שסוגרים את התיקים",
+  "Adi’s flip-flops, sandals and Shoresh sandals are listed separately so nothing is forgotten. If regular sandals and Shoresh are the same pair, pack it once. If weight is tight, choose which separate pairs you actually need.": "הכפכפים, הסנדלים והשורש של עדי מופיעים בנפרד כדי שלא יישכח דבר. אם הסנדלים והשורש הם אותו זוג, אורזים פעם אחת. אם המשקל צפוף, לבחור אילו זוגות נפרדים באמת צריך."
 };

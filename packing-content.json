@@ -189,7 +189,7 @@
       "id": "yarden-sleep",
       "owner": "yarden",
       "bag": "yarden-case",
-      "label": "1 lightweight sleepwear set"
+      "label": "Clothes for sleeping, if needed: a thin T-shirt and shorts or light pyjamas"
     },
     {
       "id": "yarden-swim",
@@ -219,7 +219,7 @@
       "id": "yarden-wedding",
       "owner": "yarden",
       "bag": "yarden-case",
-      "label": "1 complete wedding outfit, folded together in its own pouch"
+      "label": "Complete wedding outfit, including wedding trousers, folded together in one pouch"
     },
     {
       "id": "yarden-dress-shoes",
@@ -261,13 +261,13 @@
       "id": "adi-meds",
       "owner": "adi",
       "bag": "adi-bag",
-      "label": "Personal medication and other daily essentials, if used"
+      "label": "Personal medication and regular supplements"
     },
     {
       "id": "adi-glasses",
       "owner": "adi",
       "bag": "adi-bag",
-      "label": "Sunglasses; prescription glasses / contact lenses if used"
+      "label": "Sunglasses from the car; prescription glasses / contact lenses only if used"
     },
     {
       "id": "adi-bottle",
@@ -321,7 +321,7 @@
       "id": "adi-sleep",
       "owner": "adi",
       "bag": "adi-case",
-      "label": "1 lightweight sleepwear set"
+      "label": "Clothes for sleeping, if needed: a thin T-shirt and shorts or light pyjamas"
     },
     {
       "id": "adi-swim",
@@ -339,7 +339,7 @@
       "id": "adi-sandals",
       "owner": "adi",
       "bag": "adi-case",
-      "label": "1 pair of light sandals / flip-flops"
+      "label": "Sandals, if a different pair from your Shoresh sandals"
     },
     {
       "id": "adi-watershoes",
@@ -406,6 +406,66 @@
       "owner": "yarden",
       "bag": "yarden-bag",
       "label": "Matching electric-toothbrush charger; omit only if a full charge reliably lasts the entire 11-day trip"
+    },
+    {
+      "id": "yarden-deodorant",
+      "owner": "yarden",
+      "bag": "yarden-bag",
+      "label": "Personal deodorant: a stick or travel-size container"
+    },
+    {
+      "id": "adi-deodorant",
+      "owner": "adi",
+      "bag": "adi-bag",
+      "label": "Personal deodorant: a stick or travel-size container"
+    },
+    {
+      "id": "shared-watch-chargers",
+      "owner": "shared",
+      "bag": "yarden-bag",
+      "label": "Compatible watch charger(s), one for each different watch connection in use"
+    },
+    {
+      "id": "shared-comb",
+      "owner": "shared",
+      "bag": "adi-case",
+      "label": "Comb / hairbrush"
+    },
+    {
+      "id": "adi-dresses",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "1–2 everyday dresses, replacing part of the tops/bottoms allowance to save space"
+    },
+    {
+      "id": "adi-flipflops",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "Flip-flops"
+    },
+    {
+      "id": "adi-shoresh",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "Shoresh sandals; count only one pair if these are also your regular sandals"
+    },
+    {
+      "id": "adi-makeup-sponge",
+      "owner": "adi",
+      "bag": "adi-case",
+      "label": "Makeup sponge"
+    },
+    {
+      "id": "adi-lipstick",
+      "owner": "adi",
+      "bag": "adi-bag",
+      "label": "Lipstick / lip balm, as preferred"
+    },
+    {
+      "id": "shared-personal-pouch",
+      "owner": "shared",
+      "bag": "yarden-bag",
+      "label": "Private personal pouch — check its contents together before closing the bags"
     }
   ],
   "notes": [
@@ -418,6 +478,7 @@
     "Pack the first night’s sleepwear and wash kit near the top. Keep wedding outfits together and away from liquids; leave room rather than compressing them under shoes.",
     "Before the Lykos overnight, ask Akrogiali where the car and large bags will stay. Prepare a small overnight pouch with the next day’s clothes, wash kit and beach items; transfer it into the day bags once on the ground.",
     "Sofia and Astoria confirmed beach towels; other stays are unconfirmed. None of Sofia, Astoria or Roula offers in-house laundry, but they recommend nearby laundries. Prices and turnaround still need checking, so the packing quantities do not rely on a laundry service.",
-    "If space is tight: remove optional water shoes, duplicate chargers, extra footwear and full-size toiletries first. A laptop, hairdryer and bulky beach blanket are not part of the base list."
+    "If space is tight: remove optional water shoes, duplicate chargers, extra footwear and full-size toiletries first. A laptop, hairdryer and bulky beach blanket are not part of the base list.",
+    "Adi’s flip-flops, sandals and Shoresh sandals are listed separately so nothing is forgotten. If regular sandals and Shoresh are the same pair, pack it once. If weight is tight, choose which separate pairs you actually need."
   ]
 }
