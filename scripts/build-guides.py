@@ -30,7 +30,7 @@ for day in D['days']:
   cards=[]
   for key,title in [('before','Before you go'),('pack','Bring along')]:
    cards.append('<article class="practical-card"><h3>'+title+'</h3><ul class="packing-list">'+''.join('<li>'+html.escape(item)+'</li>' for item in prep[key])+'</ul></article>')
-  body+=section('prepare','Prepare & pack',grid(cards)+'<p>'+link('./packing.html','Packing checklist →')+'</p><p class="source-note">Beach towels are confirmed at Sofia and Astoria. Bring a compact towel for other stays where they are not confirmed.</p>')
+  body+=section('prepare','Prepare & pack',grid(cards)+'<p>'+link('./packing.html','Packing checklist →')+'</p><p class="source-note">Beach towels are confirmed at Polixeny’s, Sofia and Astoria. Bring a compact towel for other stays where they are not confirmed.</p>')
  useful=[D['car'] if k=='car' else D['shared'][k] for k in day['transport']]+[D['documents'][n] for n in day['documents']]
  if useful:body+=section('useful','Useful today',grid(useful)+'<p>Private Drive links require your Google account. Save documents offline separately in Drive.</p>')
  else:body+=section('useful','Useful today','<p>'+link(f'./index.html#day-{i}','Today’s route, times & options →')+link('./practical.html#documents','All travel documents →')+'</p>')
