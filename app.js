@@ -68,13 +68,13 @@ const tripDays = [
     id: 3,
     date: "Sat · 19 Sep",
     shortDate: "19 Sep",
-    title: "One full day in Chania",
+    title: "Falasarna beach day",
     location: "Chania",
-    status: "Choose together",
+    status: "Our plan",
     color: "#e3a942",
-    summary: "Protect the city day—or add one western beach if that feels more like you.",
-    metrics: ["3–6 km on foot", "4–6h exploring", "Sunset optional"],
-    note: "Both plans begin slowly in Chania. Decide after breakfast; the beach plan adds roughly 110 km of driving.",
+    summary: "A relaxed beach morning, lunch in the shade and a flexible return to Chania.",
+    metrics: ["~110 km round trip", "~1h15 each way", "Return when ready"],
+    note: "Check wind and waves before leaving. Choose an organised beach area with an umbrella; shade and sunbeds are not reserved.",
     stay: "Polixeny’s Suites · night 2 of 2",
     hotel: {
       label: "Tonight · night 2 of 2",
@@ -85,36 +85,17 @@ const tripDays = [
 
       note: "Property-confirmed stay: 18–20 Sep; pack for departure tonight"
     },
-    mapsQuery: "Chania Old Town, Greece",
-    plans: [
-      {
-        id: "city",
-        label: "Plan A",
-        title: "Chania all day",
-        note: "The lower-logistics option—and the best way to protect your only full city day.",
-        events: [
-          ["09:00–12:00", "Old Town and harbour", "About 3–4 km of relaxed walking with a coffee stop"],
-          ["12:30–15:00", "Long lunch", "Choose one place you genuinely want to linger"],
-          ["Afternoon", "Rest or nearby swim", "Keep 2–3 hours completely uncommitted"],
-          ["Sunset", "Venetian harbour", "Easy evening walk and dinner close to the hotel"]
-        ]
-      },
-      {
-        id: "falasarna",
-        label: "Plan B",
-        title: "Falasarna sunset",
-        note: "More scenery, but it turns the afternoon into a 110 km round trip.",
-        events: [
-          ["09:00–12:30", "Chania morning", "Old Town highlights · roughly 3 km on foot"],
-          ["13:30–15:00", "Drive to Falasarna", "About 55 km · allow 1h15 each way"],
-          ["15:00–sunset", "Beach and swim", "Allow 3–4 hours including food and sunset"],
-          ["After sunset", "Drive back to Chania", "About 1h15; expect a later dinner"]
-        ]
-      }
+    mapsQuery: "Falasarna Beach, Crete, Greece",
+    events: [
+      ["09:00", "Leave Chania for Falasarna", "Allow about 1–1h15 for the drive; arrive around 10:00–10:15."],
+      ["10:00–13:00", "Beach, shade and swimming", "Find an umbrella and sunbeds in an organised area. Take breaks in the shade."],
+      ["13:00–14:00", "Lunch in the shade", "Choose somewhere nearby according to appetite; no restaurant booked."],
+      ["Afternoon", "Flexible return to Chania", "Stay if it feels good, or return for a rest. No need to wait for sunset."],
+      ["Evening", "Easy evening near the hotel", "A short harbour walk or dinner, then pack for tomorrow’s departure."]
     ],
     points: [
       { name: "Chania Old Town", coords: [35.51554, 24.022812], type: "fixed" },
-      { name: "Falasarna — optional", coords: [35.49725, 23.57956], type: "flexible" }
+      { name: "Falasarna", coords: [35.49725, 23.57956], type: "flexible" }
     ]
   },
   {
