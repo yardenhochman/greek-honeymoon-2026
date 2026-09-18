@@ -21,10 +21,17 @@ def render(filename,title,intro,body,day=None):
  (ROOT/filename).write_text(head+header+nav+content+body+'</main>'+D['footer'])
 def directory():
  return grid([f'<article class="practical-card"><span>{d["id"]+16} SEP · DAY {d["id"]}</span><h3>{html.escape(d["title"])}</h3>'+link(f'./day-{d["id"]:02}.html','Recommendations & practical details →')+'</article>' for d in D['days']])
+G=json.loads((ROOT/'greek-phrases.json').read_text())
+def phrases(key, expanded=False):
+ group=G[key]
+ rows=''.join('<li><span class="phrase-meaning">'+html.escape(row['meaning'])+'</span><strong class="phrase-sound" lang="he" dir="rtl">'+html.escape(row['hebrew'])+'</strong><span class="phrase-greek" lang="el" dir="ltr">'+html.escape(row['greek'])+'</span></li>' for row in group['rows'])
+ return '<details class="phrase-box"'+(' open' if expanded else '')+'><summary>'+html.escape(group['title'])+'</summary><ul class="phrase-list">'+rows+'</ul></details>'
+phrase_intro='<p>Hebrew letters approximate the sounds. θ sounds like th in think; δ like th in this. Yes is “ne”; no is “ochi”. You can show the Greek text if pronunciation is difficult.</p>'
+phrasebook=section('greek','Say it in Greek',phrase_intro+''.join(phrases(k,k=='basics') for k in G)+'<p class="source-note">Phrase sources</p><p>'+link('https://babel.edu.gr/wp-content/uploads/2013/10/Useful-expressions-in-Greek.pdf','Babel language school · useful Greek')+link('https://www.greekpod101.com/lesson/listen-learn-speak-audio-can-do-greek-21-how-to-order-at-a-restaurant','GreekPod101 · ordering at a restaurant')+'</p>')
 for day in D['days']:
  i=day['id'];body='<nav class="guide-nav" aria-label="On this day">'+link('#recommendations','Food & places')+link('#prepare','Prepare & pack')+link('#useful','Essentials')+link('#hotels','Hotel')+'</nav>'
  if day['photo']:body+=f'<div class="section-shell">{D["photos"][day["photo"]]}</div>'
- body+=section('recommendations','Food & experiences',grid([D['shared'][k] for k in day['recommendations']]))
+ body+=section('recommendations','Food & experiences',grid([D['shared'][k] for k in day['recommendations']])+phrases('food'))
  prep=day.get('preparation')
  if prep:
   cards=[]
@@ -34,16 +41,17 @@ for day in D['days']:
  useful=[D['car'] if k=='car' else D['shared'][k] for k in day['transport']]+[D['documents'][n] for n in day['documents']]
  if useful:body+=section('useful','Useful today',grid(useful)+'<p>Private Drive links require your Google account. Save documents offline separately in Drive.</p>')
  else:body+=section('useful','Useful today','<p>'+link(f'./index.html#day-{i}','Today’s route, times & options →')+link('./practical.html#documents','All travel documents →')+'</p>')
- body+=section('hotels','Hotel & laundry',grid([D['stays'][n] for n in day['stays']]))
- body+=section('general','For any day','<p>'+link('./experiences.html#dishes','Dishes worth trying →')+link('./experiences.html#music','Music for the road →')+link('./practical.html#documents','Shared documents →')+'</p>')
+ body+='<div class="section-shell">'+phrases('road')+(phrases('outside') if i in [3,4,5,6,8,9,10] else '')+'</div>'
+ body+=section('hotels','Hotel & laundry',grid([D['stays'][n] for n in day['stays']])+phrases('hotel'))
+ body+=section('general','For any day','<p>'+link('./practical.html#greek','Greek phrasebook →')+link('./experiences.html#dishes','Dishes worth trying →')+link('./experiences.html#music','Music for the road →')+link('./practical.html#documents','Shared documents →')+'</p>')
  render(f'day-{i:02}.html',day['title'],day['intro'],body,day)
-render('experiences.html','Ideas for any day.','Dishes to recognise, music for the road and a doorway to each day’s local recommendations.','<nav class="guide-nav" aria-label="General recommendations">'+link('#dishes','What to order')+link('#music','Music for the road')+link('#days','Find your day')+'</nav>'+D['dishes']+D['music']+section('days','Choose your day',directory()))
+render('experiences.html','Ideas for any day.','Dishes to recognise, music for the road and a doorway to each day’s local recommendations.','<nav class="guide-nav" aria-label="General recommendations">'+link('#dishes','What to order')+link('#music','Music for the road')+link('#days','Find your day')+'</nav>'+D['dishes']+section('greek-food','Greek at the table',phrases('food',True)+'<p>'+link('./practical.html#greek','Greek phrasebook →')+'</p>')+D['music']+section('days','Choose your day',directory()))
 stay_links=[]
 for n,stay in enumerate(D['stays']):
  name=re.search(r'<h3>(.*?)</h3>',stay,re.S).group(1);day=next(d for d in D['days'] if n in d['stays'])
  stay_links.append(f'<article class="practical-card" id="stay-{n}"><h3>{name}</h3>'+link(f'./day-{day["id"]:02}.html#hotels','Hotel services in the day guide →')+'</article>')
 docs=D['documentsIntro']+grid(D['documents'])+'</section>'
-render('practical.html','Documents & essentials.','Our shared documents stay here. Contacts, laundry and transport are collected in the relevant day guide.',docs+section('days','Practical details by day',directory())+section('services','Hotel shortcuts',grid(stay_links)))
+render('practical.html','Documents & essentials.','Our shared documents stay here. Contacts, laundry and transport are collected in the relevant day guide.','<p class="section-shell">'+link('#greek','Greek phrasebook →')+'</p>'+phrasebook+docs+section('days','Practical details by day',directory())+section('services','Hotel shortcuts',grid(stay_links)))
 print('Built 11 day guides and 2 general hubs.')
 
 # Packing keeps stable item IDs so a content update preserves checked items.

@@ -1844,3 +1844,13 @@ html[dir="rtl"] .playlist-tracks a { unicode-bidi:plaintext; }
 @media print { .pack-controls button { display:none; } .pack-checklist label { break-inside:avoid; } }
 .pack-checklist label > span,.pack-checklist .pack-label { color:var(--ink); font-family:inherit; font-size:1rem; letter-spacing:normal; }
 body:has([data-pack-panel]) .practical-card h3 { margin-top:0; }
+
+/* Compact contextual phrasebook, with explicit directions for both scripts. */
+.phrase-box { margin-block: 1.25rem; padding: 1rem; border: 1px solid #b9c1b8; border-radius: 1rem; }
+.phrase-box summary { cursor: pointer; font-weight: 700; }
+.phrase-list { list-style: none; padding: 0; margin-block-end: 0; }
+.phrase-list li { display: grid; gap: .3rem; padding-block: .8rem; border-bottom: 1px solid #d2d4c8; overflow-wrap: anywhere; }
+.phrase-list li:last-child { border-bottom: 0; }
+.phrase-sound { font: 700 1.35rem/1.65 Arial, sans-serif; text-align: start; }
+.phrase-greek { font: 1rem/1.5 Arial, sans-serif; color: #46635d; text-align: start; }
+@media (min-width: 700px) { .phrase-list li { grid-template-columns: 1fr 1fr 1fr; align-items: center; gap: 1rem; } }

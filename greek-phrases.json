@@ -1,0 +1,177 @@
+{
+  "basics": {
+    "title": "Greek for the trip",
+    "rows": [
+      {
+        "meaning": "Thank you",
+        "greek": "Ευχαριστώ",
+        "hebrew": "אֶפְחָרִיסְטוֹ"
+      },
+      {
+        "meaning": "Please / you’re welcome",
+        "greek": "Παρακαλώ",
+        "hebrew": "פָּרָקָלוֹ"
+      },
+      {
+        "meaning": "Hello / goodbye (polite)",
+        "greek": "Γεια σας",
+        "hebrew": "יָא סָאס"
+      },
+      {
+        "meaning": "Good morning",
+        "greek": "Καλημέρα",
+        "hebrew": "קָלִימֶרָה"
+      },
+      {
+        "meaning": "Good evening",
+        "greek": "Καλησπέρα",
+        "hebrew": "קָלִיסְפֶּרָה"
+      },
+      {
+        "meaning": "Good night",
+        "greek": "Καληνύχτα",
+        "hebrew": "קָלִינִיחְטָה"
+      },
+      {
+        "meaning": "Excuse me / sorry",
+        "greek": "Συγγνώμη",
+        "hebrew": "סִיגְנוֹמִי"
+      },
+      {
+        "meaning": "Yes",
+        "greek": "Ναι",
+        "hebrew": "נֶה"
+      },
+      {
+        "meaning": "No",
+        "greek": "Όχι",
+        "hebrew": "אוֹחִי"
+      },
+      {
+        "meaning": "Do you speak English?",
+        "greek": "Μιλάτε αγγλικά;",
+        "hebrew": "מִילָאטֶה אַנְגְלִיקָה"
+      }
+    ]
+  },
+  "food": {
+    "title": "Greek at the table",
+    "rows": [
+      {
+        "meaning": "The menu, please",
+        "greek": "Τον κατάλογο, παρακαλώ",
+        "hebrew": "טוֹן קָטָלוֹגוֹ, פָּרָקָלוֹ"
+      },
+      {
+        "meaning": "The bill, please",
+        "greek": "Τον λογαριασμό, παρακαλώ",
+        "hebrew": "טוֹן לוֹגָרְיַאזְמוֹ, פָּרָקָלוֹ"
+      },
+      {
+        "meaning": "Water, please",
+        "greek": "Νερό, παρακαλώ",
+        "hebrew": "נֶרוֹ, פָּרָקָלוֹ"
+      },
+      {
+        "meaning": "A coffee, please",
+        "greek": "Έναν καφέ, παρακαλώ",
+        "hebrew": "אֶנָן קָפֶה, פָּרָקָלוֹ"
+      },
+      {
+        "meaning": "Without sugar",
+        "greek": "Χωρίς ζάχαρη",
+        "hebrew": "חוֹרִיס זָחָרִי"
+      },
+      {
+        "meaning": "Fish",
+        "greek": "Ψάρι",
+        "hebrew": "פְּסָארִי"
+      },
+      {
+        "meaning": "Meat",
+        "greek": "Κρέας",
+        "hebrew": "קְרֶאַס"
+      },
+      {
+        "meaning": "Without meat",
+        "greek": "Χωρίς κρέας",
+        "hebrew": "חוֹרִיס קְרֶאַס"
+      },
+      {
+        "meaning": "Cheers!",
+        "greek": "Στην υγειά μας!",
+        "hebrew": "סְטִין יָא מָאס"
+      }
+    ]
+  },
+  "hotel": {
+    "title": "Greek at the hotel",
+    "rows": [
+      {
+        "meaning": "Room",
+        "greek": "Δωμάτιο",
+        "hebrew": "דוֹמָאטִיוֹ"
+      },
+      {
+        "meaning": "Key",
+        "greek": "Κλειδί",
+        "hebrew": "קְלִידִי"
+      },
+      {
+        "meaning": "Towel",
+        "greek": "Πετσέτα",
+        "hebrew": "פֶּצֶטָה"
+      },
+      {
+        "meaning": "Beach towel",
+        "greek": "Πετσέτα θαλάσσης",
+        "hebrew": "פֶּצֶטָה תָ׳לָאסִיס"
+      }
+    ]
+  },
+  "road": {
+    "title": "Greek on the way",
+    "rows": [
+      {
+        "meaning": "How much is it?",
+        "greek": "Πόσο κάνει;",
+        "hebrew": "פּוֹסוֹ קָנִי"
+      },
+      {
+        "meaning": "Where is the port?",
+        "greek": "Πού είναι το λιμάνι;",
+        "hebrew": "פּוּ אִינֶה טוֹ לִימָאנִי"
+      },
+      {
+        "meaning": "Where is the bus stop?",
+        "greek": "Πού είναι η στάση;",
+        "hebrew": "פּוּ אִינֶה אִי סְטָאסִי"
+      },
+      {
+        "meaning": "Two tickets, please",
+        "greek": "Δύο εισιτήρια, παρακαλώ",
+        "hebrew": "דִ׳יוֹ אִיסִיטִירִיָה, פָּרָקָלוֹ"
+      }
+    ]
+  },
+  "outside": {
+    "title": "Greek at the beach & on walks",
+    "rows": [
+      {
+        "meaning": "Where is the beach?",
+        "greek": "Πού είναι η παραλία;",
+        "hebrew": "פּוּ אִינֶה אִי פָּרָלִיָה"
+      },
+      {
+        "meaning": "Where is the toilet?",
+        "greek": "Πού είναι η τουαλέτα;",
+        "hebrew": "פּוּ אִינֶה אִי טוּאָלֶטָה"
+      },
+      {
+        "meaning": "Help!",
+        "greek": "Βοήθεια!",
+        "hebrew": "ווֹאִיתְ׳יָה"
+      }
+    ]
+  }
+}
