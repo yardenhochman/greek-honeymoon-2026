@@ -69,3 +69,19 @@ for view,groups in [('person',P['groups']),('bag',{k:v['label'] for k,v in P['ba
 packing+='</section>'+section('packing-notes','Before closing the bags','<ul class="packing-list">'+''.join('<li>'+html.escape(n)+'</li>' for n in P['notes'][2:])+'</ul>')
 packing+=section('packing-sources','Sources checked 16 Sep 2026','<div class="tool-links">'+link('https://www.bluebirdair.com/TRAVEL-INFORMATION/Checked-baggage','Airline baggage rules ↗')+link('https://booking.bluebirdair.com/Travel-information/Lithium-Battery-Allowance-and-Dangerous-Goods','Airline battery rules ↗')+link('https://transport.ec.europa.eu/transport-modes/air/aviation-security/aviation-security-policy/liquids-aerosols-and-gels_en','EU liquids rules ↗')+link('https://drive.google.com/file/d/18w86zU1xVx-NhHdnHLqbRzQyinC8OjVc/view','Original flight ticket · private Drive ↗')+'</div>')
 render('packing.html',P['title'],P['intro'],packing+'<script src="./packing.js"></script>')
+
+# Feed compact daily preparation and recommendation links into the main timeline.
+summary = {}
+for day in D['days']:
+    recommendations = []
+    photo = ''
+    for key in day['recommendations']:
+        card = D['shared'][key]
+        title = re.search(r'<h3>(.*?)</h3>', card, re.S)
+        if title:
+            recommendations.append(html.unescape(re.sub(r'<[^>]+>', '', title.group(1))))
+        figure = re.search(r'<figure.*?</figure>', card, re.S)
+        if not photo and figure and './assets/' in figure.group(0):
+            photo = figure.group(0)
+    summary[day['id']] = dict(preparation=day.get('preparation', {}), recommendations=recommendations, photo=photo)
+(ROOT/'day-essentials.js').write_text('window.TRIP_ESSENTIALS = '+json.dumps(summary, ensure_ascii=False)+';\n')

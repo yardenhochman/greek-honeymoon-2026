@@ -91,6 +91,7 @@ const tripDays = [
       ["11:00–13:30", "Beach, shade and swimming", "Find an umbrella and sunbeds in an organised area. Take breaks in the shade."],
       ["13:30–14:30", "Lunch in the shade", "Playa Paraiso for snacks, or Kyma Fotis for sandwiches and salads. See today’s guide for links and prices."],
       ["Afternoon", "Flexible return to Chania", "Stay if it feels good, or return for a rest. No need to wait for sunset."],
+      ["After the beach", "Laundry, then a rest", "Ask Polixeny for the nearby self-service laundry location and hours. Wash and dry before tomorrow’s checkout, then pizza near the hotel."],
       ["Evening", "Probably pizza near the hotel", "A simple evening near Polixeny’s; choose a pizza place when back, then pack for tomorrow. Nothing booked."]
     ],
     points: [
@@ -549,6 +550,10 @@ function createDayCard(day) {
   const hotel = day.hotel;
   const mapFile = day.id === 9 ? "08" : filename;
 
+  const essentials = window.TRIP_ESSENTIALS?.[day.id];
+  const preparation = essentials?.preparation;
+  const dailyKit = preparation ? `<section class="daily-kit"><h4>For this day</h4><ul>${preparation.pack.map(item => `<li>${item}</li>`).join("")}</ul><details><summary>Check before setting off</summary><ul>${preparation.before.map(item => `<li>${item}</li>`).join("")}</ul></details><details><summary>Stops, food & photos</summary>${essentials.photo}<ul>${essentials.recommendations.map(title => `<li><a href="./day-${filename}.html#recommendations">${title}</a></li>`).join("")}</ul></details></section>` : "";
+
   article.innerHTML = `
     <div class="day-card-head">
       <span class="day-number">${day.id}</span>
@@ -596,6 +601,7 @@ function createDayCard(day) {
         </section>
       </div>
     </div>
+    ${dailyKit}
     <div class="day-foot">
       <span class="stay-pill">Sleep: ${day.stay}</span>
       <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(day.mapsQuery)}" target="_blank" rel="noreferrer">Open in Google Maps ↗</a>
@@ -635,10 +641,6 @@ function createDayCard(day) {
     });
   }
 
-  article.addEventListener("click", (event) => {
-    if (event.target.closest("a")) return;
-    selectDay(day.id, false);
-  });
   return article;
 }
 
@@ -667,13 +669,13 @@ function selectDay(dayId, shouldScroll) {
     const isSelected = dayId === null ? chip.dataset.day === "all" : chip.dataset.day === String(dayId);
     chip.classList.toggle("is-active", isSelected);
     chip.setAttribute("aria-pressed", String(isSelected));
-    if (isSelected) chip.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    if (isSelected) filter.scrollTo({ left: chip.offsetLeft - filter.offsetLeft - (filter.clientWidth - chip.offsetWidth) / 2, behavior: "instant" });
   });
 
   cards.forEach(card => {
     const isSelected = card.dataset.dayCard === String(dayId);
     card.classList.toggle("is-active", isSelected);
-    card.classList.toggle("is-muted", dayId !== null && !isSelected);
+    card.hidden = dayId !== null && Number(card.dataset.dayCard) < dayId;
   });
 
   if (dayId === null) {
@@ -682,7 +684,7 @@ function selectDay(dayId, shouldScroll) {
 
   const day = tripDays.find(item => item.id === dayId);
   if (shouldScroll) {
-    document.getElementById(`day-${day.id}`).scrollIntoView({ behavior: "smooth", block: "center" });
+    document.getElementById(`day-${day.id}`).scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 
@@ -704,7 +706,7 @@ function initObservers() {
   document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 }
 
-document.querySelector("[data-show-overview]").addEventListener("click", () => {
+document.querySelector("[data-show-overview]")?.addEventListener("click", () => {
   selectDay(null, false);
   document.getElementById("itinerary").scrollIntoView({ behavior: "smooth" });
 });
@@ -713,10 +715,33 @@ document.querySelector("[data-print]").addEventListener("click", () => window.pr
 renderStaticContent();
 initObservers();
 
-// Greece's local calendar date also works when either phone is in Israel.
-const greekDate = new Intl.DateTimeFormat("en-CA", {timeZone: "Europe/Athens", year: "numeric", month: "2-digit", day: "2-digit"}).format(new Date());
-const todayId = tripDays.find(day => greekDate === `2026-09-${String(day.id + 16).padStart(2, "0")}`)?.id;
-const todayButton = document.querySelector("[data-today]");
-todayButton.textContent = todayId ? "Today’s plan" : (greekDate < "2026-09-17" ? "Start of the trip" : "Last day of the trip");
-todayButton.addEventListener("click", () => selectDay(todayId ?? (greekDate < "2026-09-17" ? 1 : 11), true));
-document.querySelector("[data-santorini]").addEventListener("click", () => selectDay(8, true));
+// Use the date in Greece, including offline and when the device uses another timezone.
+function currentTripDay() {
+  const date = new Intl.DateTimeFormat("en-CA", {timeZone: "Europe/Athens", year: "numeric", month: "2-digit", day: "2-digit"}).format(new Date());
+  return tripDays.find(day => date === `2026-09-${String(day.id + 16).padStart(2, "0")}`)?.id ?? (date < "2026-09-17" ? 1 : 11);
+}
+let lastTripDay = currentTripDay();
+function openRequestedDay() {
+  const match = location.hash.match(/^#day-(\d+)$/);
+  const requested = match && tripDays.find(day => day.id === Number(match[1]));
+  selectDay(location.hash === "#all" ? null : requested?.id ?? currentTripDay(), false);
+}
+openRequestedDay();
+window.addEventListener("hashchange", openRequestedDay);
+document.querySelector("[data-today]").addEventListener("click", () => {
+  history.replaceState(null, "", location.pathname + location.search);
+  selectDay(currentTripDay(), true);
+});
+function refreshTripDate() {
+  const next = currentTripDay();
+  if (next !== lastTripDay) {
+    lastTripDay = next;
+    if (!location.hash || location.hash === "#top" || location.hash === "#itinerary") {
+      selectDay(next, false);
+      window.scrollTo({top: 0, behavior: "instant"});
+    }
+  }
+}
+window.addEventListener("pageshow", refreshTripDate);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshTripDate(); });
+setInterval(refreshTripDate, 60000);

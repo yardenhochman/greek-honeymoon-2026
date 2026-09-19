@@ -18,7 +18,7 @@
 <script src="./translations.js"></script>
 <script src="./language.js"></script>
 </head>
-<body>
+<body class="today-home">
   <a class="skip-link" href="#itinerary">Skip to the itinerary</a>
 
   <header class="site-header">
@@ -31,7 +31,7 @@
     </a>
 
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="#route">Route</a>
+      <a href="./memoir.html#route">Route</a>
       <a href="#itinerary">Days</a>
       <a href="./practical.html">Documents</a>
       <a href="./experiences.html">Day guides</a>
@@ -51,109 +51,14 @@
       <button type="button" data-update hidden>Update saved plan</button>
       <details><summary>Keep this on your phone</summary><p>Android: open in Chrome and choose Add to home screen / Install app from the menu. iPhone: open in Safari, tap Share, then Add to Home Screen. Wait for “Saved for offline use” before leaving Wi-Fi. Google Maps navigation, tickets and external links need their own offline preparation.</p></details>
     </aside>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-grain" aria-hidden="true"></div>
-      <div class="hero-copy reveal">
-        <p class="eyebrow">17—27 September 2026 · 10 nights</p>
-        <h1 id="hero-title">Crete by road.<br><em>Santorini by sea.</em></h1>
-        <p class="hero-intro">
-          A honeymoon moving from Venetian harbours to the wild south coast,
-          then across the Aegean for a family wedding—and one last jacuzzi night.
-        </p>
-
-        <div class="hero-actions">
-          <a class="text-button" href="./practical.html#greek">Greek phrasebook →</a>
-          <a class="text-button" href="./packing.html">Packing checklist →</a>
-          <a class="text-button" href="./practical.html">Documents & essentials →</a>
-          <a class="text-button" href="./experiences.html">Day guides & general recommendations →</a>
-          <button class="primary-button" type="button" data-today>Today’s plan</button>
-          <button class="text-button" type="button" data-santorini>Santorini · 24–26 Sep →</button>
-          <button class="text-button" type="button" data-show-overview>See the whole route <span>→</span></button>
-        </div>
+    <section class="planner" id="itinerary" aria-label="Our daily plan">
+      <div class="daily-tools">
+        <h1>Our daily plan</h1>
+        <button class="tool-link" type="button" data-today>Today’s plan</button>
+        <a class="tool-link" href="./practical.html">Documents</a>
+        <a class="tool-link" href="./packing.html">Packing</a>
+        <a class="tool-link" href="./memoir.html">Our trip keepsake</a>
       </div>
-
-      <div class="hero-atlas reveal delay-1" aria-label="Trip summary">
-        <div class="atlas-orbit orbit-one" aria-hidden="true"></div>
-        <div class="atlas-orbit orbit-two" aria-hidden="true"></div>
-        <div class="atlas-sun" aria-hidden="true"></div>
-        <div class="atlas-route" aria-hidden="true">
-          <svg viewBox="0 0 390 450" role="presentation">
-            <path d="M48 110 C125 70, 182 147, 270 118 S350 154, 318 224 C284 299, 179 236, 145 318 S201 409, 306 369" />
-            <circle cx="48" cy="110" r="6" />
-            <circle cx="145" cy="318" r="6" />
-            <circle cx="306" cy="369" r="6" />
-          </svg>
-        </div>
-        <div class="atlas-title">
-          <span>35° N</span>
-          <strong>Aegean<br>field notes</strong>
-        </div>
-        <div class="atlas-stats">
-          <div><strong>11</strong><span>days</span></div>
-          <div><strong>8</strong><span>stays</span></div>
-          <div><strong>2</strong><span>islands</span></div>
-        </div>
-        <p class="atlas-caption">Heraklion → Chania → south coast → Santorini → home</p>
-      </div>
-
-      <div class="hero-footnote reveal delay-2">
-        <span class="line"></span>
-        <span>For Yarden & Adi</span>
-        <span class="small-sun" aria-hidden="true"></span>
-        <span>Made to leave room for the unexpected</span>
-      </div>
-    </section>
-
-    <section class="section-shell trip-photo-pair" aria-label="A glimpse of our islands"><figure class="trip-photo"><img src="./assets/chania.jpg" width="960" height="532" alt="Boats and lighthouse in Chania’s Venetian harbour" loading="lazy" decoding="async"><figcaption><strong>Chania’s Venetian harbour</strong><small>Photo: <a href="https://commons.wikimedia.org/wiki/File:Harbor_and_lighthouse_of_Chania._Crete,_Greece.jpg">Volodymyr Vlasenko</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></small></figcaption></figure><figure class="trip-photo"><img src="./assets/perissa.jpg" width="960" height="636" alt="Black sand beach and the cliffs of Mesa Vouno at Perissa, Santorini" loading="lazy" decoding="async"><figcaption><strong>Perissa · our Santorini base</strong><small>Photo: <a href="https://commons.wikimedia.org/wiki/File:Beach_-_Perissa_-_Santorini_-_Greece_-_02.jpg">Norbert Nagel</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></small></figcaption></figure></section>
-
-    <section class="route-overview section-shell" id="route" aria-labelledby="route-title">
-      <div class="section-heading reveal">
-        <p class="eyebrow dark">The shape of the trip</p>
-        <h2 id="route-title">Four chapters,<br>one easy rhythm.</h2>
-        <p>Reservations are fixed. Most afternoons are intentionally breathable.</p>
-      </div>
-
-      <div class="chapter-grid">
-        <article class="chapter-card chapter-city reveal delay-1">
-          <span class="chapter-number">01</span>
-          <p class="chapter-dates">17—20 Sep</p>
-          <h3>Harbours & old streets</h3>
-          <p>Land in Heraklion, collect the car, then settle into two nights in Chania.</p>
-          <span class="chapter-meta">Heraklion · Chania</span>
-        </article>
-        <article class="chapter-card chapter-wild reveal delay-2">
-          <span class="chapter-number">02</span>
-          <p class="chapter-dates">20—24 Sep</p>
-          <h3>The wild south</h3>
-          <p>A gorge, tiny coastal villages, palm forest, beaches and a slow drive east.</p>
-          <span class="chapter-meta">Lykos · Plakias · Agia Galini</span>
-        </article>
-        <article class="chapter-card chapter-island reveal delay-3">
-          <span class="chapter-number">03</span>
-          <p class="chapter-dates">24—26 Sep</p>
-          <h3>Across the Aegean</h3>
-          <p>Morning ferry to Perissa, an unhurried arrival day and the wedding.</p>
-          <span class="chapter-meta">Santorini · Wedding</span>
-        </article>
-        <article class="chapter-card chapter-home reveal delay-4">
-          <span class="chapter-number">04</span>
-          <p class="chapter-dates">26—27 Sep</p>
-          <h3>One last exhale</h3>
-          <p>Back to Heraklion for a sea-view suite, outdoor jacuzzi and flight home.</p>
-          <span class="chapter-meta">Porta Suites · TLV</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="planner" id="itinerary" aria-labelledby="itinerary-title">
-      <div class="planner-intro section-shell">
-        <div>
-          <p class="eyebrow dark">Day by day</p>
-          <h2 id="itinerary-title">The plan, at our pace.</h2>
-        </div>
-        <p>Use the quick index to focus a day. Each card includes its route, timing, stay and switchable alternatives.</p>
-      </div>
-
       <div class="day-filter-wrap" aria-label="Filter itinerary by day">
         <div class="day-filter" data-day-filter></div>
       </div>
@@ -179,62 +84,6 @@
         <article class="practical-card reveal"><span>25 SEP</span><h3>The wedding</h3><p>Afternoon family celebration. Venue, exact time and transport both ways still need confirmation with the family.</p></article>
         <article class="practical-card reveal"><span>26 SEP</span><h3>Back to Crete</h3><p>Check out by 11:00; confirm luggage storage and the port transfer. Ferry 15:45–17:20, then Porta Suites around 18:00.</p></article>
         <article class="practical-card reveal"><span>TO CONFIRM</span><h3>Three practical details</h3><p>Confirm both port transfers, wedding transport and luggage storage at Roula Villa. SeaJets tickets cover the ferry, not these transfers.</p></article>
-      </div>
-    </section>
-
-    <section class="decisions section-shell" id="decisions" aria-labelledby="decisions-title">
-      <div class="section-heading decisions-heading reveal">
-        <p class="eyebrow dark">A conversation for two</p>
-        <h2 id="decisions-title">Five things to decide together.</h2>
-        <p>Hotels and ferries are reserved. These choices shape the days; Santorini transfers and wedding details still need confirmation.</p>
-      </div>
-
-      <div class="decision-list">
-        <article class="decision-card reveal">
-          <span class="decision-index">01</span>
-          <div>
-            <p class="decision-day">Saturday · Chania</p>
-            <h3>City day or a western beach?</h3>
-            <p>Protect the only full Chania day, or add Falasarna for a scenic sunset.</p>
-          </div>
-          <span class="recommendation">Lean: Chania + optional Falasarna</span>
-        </article>
-        <article class="decision-card reveal delay-1">
-          <span class="decision-index">02</span>
-          <div>
-            <p class="decision-day">Sunday · Sfakia</p>
-            <h3>Imbros or Aradena?</h3>
-            <p>Imbros is balanced and lower-exposure. Aradena is technical, wild and more committing.</p>
-          </div>
-          <span class="recommendation">Lean: Imbros</span>
-        </article>
-        <article class="decision-card reveal delay-2">
-          <span class="decision-index">03</span>
-          <div>
-            <p class="decision-day">Monday · Glyka Nera</p>
-            <h3>Boat or exposed coastal trail?</h3>
-            <p>Decide at the beach. The boat is a designed-in comfort option, not a fallback failure.</p>
-          </div>
-          <span class="recommendation">Lean: decide in the moment</span>
-        </article>
-        <article class="decision-card reveal delay-3">
-          <span class="decision-index">04</span>
-          <div>
-            <p class="decision-day">Tuesday · South coast</p>
-            <h3>Sunset or an easy arrival?</h3>
-            <p>Agios Pavlos at sunset is beautiful; leaving earlier avoids the drive to Agia Galini after dark.</p>
-          </div>
-          <span class="recommendation">Lean: follow the energy</span>
-        </article>
-        <article class="decision-card reveal delay-4">
-          <span class="decision-index">05</span>
-          <div>
-            <p class="decision-day">Somewhere in Crete</p>
-            <h3>What is our one signature experience?</h3>
-            <p>A cooking class, winery, olive-oil tasting—or simply one exceptional long lunch.</p>
-          </div>
-          <span class="recommendation">Choose one, not three</span>
-        </article>
       </div>
     </section>
 
@@ -288,6 +137,7 @@
     <a href="#top">Back to the sun ↑</a>
   </footer>
 
+  <script src="./day-essentials.js"></script>
   <script src="./app.js"></script>
   <script src="./phone.js"></script>
 </body>
