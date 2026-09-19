@@ -21,6 +21,7 @@ installButton.addEventListener("click", async () => {
   await installPrompt.prompt(); installPrompt = null; installButton.hidden = true;
 });
 window.addEventListener("appinstalled", () => { installButton.hidden = true; });
+let tripRegistration;
 if ("serviceWorker" in navigator && window.isSecureContext) {
   const status = offlineStatus;
   let hadController = !!navigator.serviceWorker.controller;
@@ -28,7 +29,8 @@ if ("serviceWorker" in navigator && window.isSecureContext) {
     if (hadController) window.location.reload();
     hadController = true;
   });
-  navigator.serviceWorker.register("./sw.js", { updateViaCache: "none" }).then(registration => {
+  tripRegistration = navigator.serviceWorker.register("./sw.js", { updateViaCache: "none" });
+  tripRegistration.then(registration => {
     // Installed apps often resume an existing page instead of navigating again.
     const checkForUpdate = () => {
       if (navigator.onLine) registration.update().catch(() => {});
@@ -68,3 +70,58 @@ document.addEventListener('error', event => {
     image.style.display = 'none';
   }
 }, true);
+
+// Always available, even when the saved-offline banner is hidden.
+const refreshButton = document.createElement("button");
+refreshButton.type = "button";
+refreshButton.className = "refresh-button";
+refreshButton.dataset.refresh = "";
+refreshButton.textContent = "Refresh";
+refreshButton.setAttribute("aria-label", "Check for the latest version");
+document.querySelector(".site-header").append(refreshButton);
+const refreshMessage = document.createElement("p");
+refreshMessage.className = "refresh-message";
+refreshMessage.setAttribute("role", "status");
+refreshMessage.hidden = true;
+document.body.append(refreshMessage);
+refreshButton.addEventListener("click", async () => {
+  refreshMessage.hidden = false;
+  if (!navigator.onLine) {
+    refreshMessage.textContent = "You are offline. Your saved plan is still available; refresh when connected.";
+    return;
+  }
+  refreshButton.disabled = true;
+  refreshButton.textContent = "Checking…";
+  refreshMessage.textContent = "Checking for the latest version…";
+  try {
+    const registration = await tripRegistration;
+    if (registration) {
+      // update() fetches the worker script; wait for its assets before reloading.
+      await registration.update();
+      const worker = registration.installing || registration.waiting;
+      if (worker) {
+        refreshMessage.textContent = "Downloading the latest plan…";
+        await new Promise((resolve, reject) => {
+          const timer = setTimeout(() => finish(new Error("Update timeout")), 45000);
+          function finish(error) {
+            clearTimeout(timer);
+            worker.removeEventListener("statechange", check);
+            error ? reject(error) : resolve();
+          }
+          function check() {
+            if (worker.state === "activated") finish();
+            else if (worker.state === "redundant") finish(new Error("Update failed"));
+            else if (worker.state === "installed") worker.postMessage("ACTIVATE_UPDATE");
+          }
+          worker.addEventListener("statechange", check);
+          check();
+        });
+      }
+    }
+    window.location.reload();
+  } catch {
+    refreshMessage.textContent = "Could not refresh. Your saved plan is safe; please try again.";
+    refreshButton.disabled = false;
+    refreshButton.textContent = "Refresh";
+  }
+});

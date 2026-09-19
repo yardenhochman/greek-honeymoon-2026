@@ -1227,5 +1227,12 @@ window.TRIP_HE = {
   "After the beach": "אחרי החוף",
   "Laundry, then a rest": "כביסה ואז מנוחה",
   "Ask Polixeny for the nearby self-service laundry location and hours. Wash and dry before tomorrow’s checkout, then pizza near the hotel.": "בררו בפוליקסני מיקום ושעות של המכבסה בשירות עצמי בסביבה. כבסו וייבשו לפני העזיבה מחר, ואז פיצה ליד המלון.",
-  "Keep laundry in a separate bag; ask reception about the laundrette’s hours and drying options before heading out.": "הכינו כביסה בשקית נפרדת; בררו בקבלה שעות מכבסה ואפשרות ייבוש לפני היציאה."
+  "Keep laundry in a separate bag; ask reception about the laundrette’s hours and drying options before heading out.": "הכינו כביסה בשקית נפרדת; בררו בקבלה שעות מכבסה ואפשרות ייבוש לפני היציאה.",
+  "Refresh": "רענון",
+  "Check for the latest version": "בדיקת הגרסה העדכנית",
+  "Checking…": "בודק…",
+  "Checking for the latest version…": "בודק אם יש גרסה חדשה…",
+  "Downloading the latest plan…": "מוריד את התוכנית המעודכנת…",
+  "You are offline. Your saved plan is still available; refresh when connected.": "אין חיבור לאינטרנט. התוכנית השמורה זמינה; אפשר לרענן כשמתחברים.",
+  "Could not refresh. Your saved plan is safe; please try again.": "הרענון לא הצליח. התוכנית השמורה נשמרה; נסו שוב."
 };

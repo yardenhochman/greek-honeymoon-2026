@@ -1869,3 +1869,10 @@ body:has([data-pack-panel]) .practical-card h3 { margin-top:0; }
 .daily-kit summary { cursor:pointer; padding-block:0.5rem; font-weight:600; }
 .daily-kit li { margin-block:0.4rem; }
 .daily-kit .trip-photo { max-width:480px; }
+
+.refresh-button { border:1px solid var(--line); border-radius:999px; background:transparent; color:inherit; font:inherit; padding:0.5rem 0.8rem; cursor:pointer; white-space:nowrap; }
+.refresh-button:disabled { opacity:0.6; cursor:wait; }
+.site-header { grid-template-columns:auto 1fr auto auto auto; }
+.guide-page .site-header { grid-template-columns:1fr auto auto; }
+.refresh-message { position:fixed; bottom:1rem; inset-inline:1rem; z-index:3000; width:fit-content; max-width:calc(100% - 2rem); margin:auto; padding:0.8rem 1rem; background:var(--paper-bright); color:var(--ink); border:1px solid var(--line); border-radius:12px; box-shadow:0 2px 12px #0002; }
+@media(max-width:680px) { .site-header { display:flex; flex-wrap:wrap; gap:8px; } .site-header .brand { margin-inline-end:auto; } .refresh-button { font-size:14px; padding:8px 10px; } }
