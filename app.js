@@ -72,7 +72,7 @@ const tripDays = [
     location: "Chania",
     status: "Our plan",
     color: "#e3a942",
-    summary: "A relaxed beach morning, lunch in the shade and a flexible return to Chania.",
+    summary: "Beach, a light lunch and likely pizza near the hotel tonight.",
     metrics: ["~110 km round trip", "~1h15 each way", "Return when ready"],
     note: "Check wind and waves before leaving. Choose an organised beach area with an umbrella; shade and sunbeds are not reserved.",
     stay: "Polixeny’s Suites · night 2 of 2",
@@ -85,13 +85,13 @@ const tripDays = [
 
       note: "Property-confirmed stay: 18–20 Sep; pack for departure tonight"
     },
-    mapsQuery: "Falasarna Beach, Crete, Greece",
+    mapsQuery: "Playa Paraiso Falassarna, Crete, Greece",
     events: [
-      ["09:00", "Leave Chania for Falasarna", "Allow about 1–1h15 for the drive; arrive around 10:00–10:15."],
-      ["10:00–13:00", "Beach, shade and swimming", "Find an umbrella and sunbeds in an organised area. Take breaks in the shade."],
-      ["13:00–14:00", "Lunch in the shade", "Choose somewhere nearby according to appetite; no restaurant booked."],
+      ["10:00–10:30", "Leave Chania for Falasarna", "Suggested departure after the later start; allow 1–1h15 and arrive around 11:00–11:45."],
+      ["11:00–13:30", "Beach, shade and swimming", "Find an umbrella and sunbeds in an organised area. Take breaks in the shade."],
+      ["13:30–14:30", "Lunch in the shade", "Playa Paraiso for snacks, or Kyma Fotis for sandwiches and salads. See today’s guide for links and prices."],
       ["Afternoon", "Flexible return to Chania", "Stay if it feels good, or return for a rest. No need to wait for sunset."],
-      ["Evening", "Easy evening near the hotel", "A short harbour walk or dinner, then pack for tomorrow’s departure."]
+      ["Evening", "Probably pizza near the hotel", "A simple evening near Polixeny’s; choose a pizza place when back, then pack for tomorrow. Nothing booked."]
     ],
     points: [
       { name: "Chania Old Town", coords: [35.51554, 24.022812], type: "fixed" },
