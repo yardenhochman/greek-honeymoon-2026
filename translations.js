@@ -1255,5 +1255,6 @@ window.TRIP_HE = {
   "The hotel’s long list contains recommendations from several earlier years. Do not rely on its cinema price, bus frequency or water-taxi interval without a current check. Long hikes, a volcano cruise and an Oia sunset are alternatives that need their own time, not additions to the short stay.": "הרשימה הארוכה של המלון כוללת המלצות משנים קודמות. אין להסתמך על מחיר הקולנוע, תדירות האוטובוסים או מוניות הים בלי בדיקה עדכנית. טיולים ארוכים, שיט להר הגעש ושקיעה באויה הם חלופות שדורשות זמן משלהן, לא תוספות חובה לשהות הקצרה.",
   "Metaxy Mas · reservations": "מטקסי מאס · הזמנות",
   "Santo Wines · booking": "סנטו וויינס · הזמנה",
-  "Sirocco · pizza & pasta": "סירוקו · פיצה ופסטה"
+  "Sirocco · pizza & pasta": "סירוקו · פיצה ופסטה",
+  "Scheduled time has passed; not a completion mark": "השעה המתוכננת חלפה; אין זה סימון שבוצע"
 };

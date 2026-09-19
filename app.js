@@ -520,7 +520,7 @@ function createDayCard(day) {
   article.style.setProperty("--day-color", day.color);
 
   const renderEvents = events => events.map(([time, title, detail]) => `
-    <div class="day-event">
+    <div class="day-event" data-event-time="${time}">
       <span class="event-time">${time}</span>
       <div class="event-copy"><strong>${title}</strong><span>${detail}</span></div>
     </div>
@@ -623,6 +623,7 @@ function createDayCard(day) {
       panel.querySelector("[data-plan-title]").textContent = plan.title;
       panel.querySelector("[data-plan-note]").textContent = plan.note;
       panel.querySelector("[data-plan-events]").innerHTML = renderEvents(plan.events);
+      updateElapsedEvents();
     };
 
     tabs.forEach((tab, index) => {
@@ -733,6 +734,7 @@ document.querySelector("[data-today]").addEventListener("click", () => {
   selectDay(currentTripDay(), true);
 });
 function refreshTripDate() {
+  updateElapsedEvents();
   const next = currentTripDay();
   if (next !== lastTripDay) {
     lastTripDay = next;
@@ -745,3 +747,25 @@ function refreshTripDate() {
 window.addEventListener("pageshow", refreshTripDate);
 document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshTripDate(); });
 setInterval(refreshTripDate, 60000);
+
+function updateElapsedEvents() {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Europe/Athens", year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+  }).formatToParts(new Date()).map(part => [part.type, part.value]));
+  const date = `${parts.year}-${parts.month}-${parts.day}`;
+  const minutes = Number(parts.hour) * 60 + Number(parts.minute);
+  document.querySelectorAll("[data-day-card]").forEach(card => {
+    const dayDate = `2026-09-${String(Number(card.dataset.dayCard) + 16).padStart(2, "0")}`;
+    card.querySelectorAll("[data-event-time]").forEach(event => {
+      // Only exact clock times: leave Afternoon, After the beach, sunset, etc. alone.
+      const match = event.dataset.eventTime.match(/^(\d{1,2}):(\d{2})(?:[–—-](\d{1,2}):(\d{2}))?$/);
+      const end = match ? Number(match[3] ?? match[1]) * 60 + Number(match[4] ?? match[2]) : null;
+      const elapsed = dayDate < date || (dayDate === date && end !== null && minutes >= end);
+      event.classList.toggle("is-elapsed", elapsed);
+      if (elapsed) event.setAttribute("title", "Scheduled time has passed; not a completion mark");
+      else event.removeAttribute("title");
+    });
+  });
+}
+updateElapsedEvents();

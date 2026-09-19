@@ -1876,3 +1876,7 @@ body:has([data-pack-panel]) .practical-card h3 { margin-top:0; }
 .guide-page .site-header { grid-template-columns:1fr auto auto; }
 .refresh-message { position:fixed; bottom:1rem; inset-inline:1rem; z-index:3000; width:fit-content; max-width:calc(100% - 2rem); margin:auto; padding:0.8rem 1rem; background:var(--paper-bright); color:var(--ink); border:1px solid var(--line); border-radius:12px; box-shadow:0 2px 12px #0002; }
 @media(max-width:680px) { .site-header { display:flex; flex-wrap:wrap; gap:8px; } .site-header .brand { margin-inline-end:auto; } .refresh-button { font-size:14px; padding:8px 10px; } }
+
+.day-event.is-elapsed { opacity:0.55; transition:opacity 150ms ease; }
+.day-event.is-elapsed:hover, .day-event.is-elapsed:focus-within { opacity:1; }
+@media print { .day-event.is-elapsed { opacity:1; } }
