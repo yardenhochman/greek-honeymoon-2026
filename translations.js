@@ -1289,3 +1289,13 @@ Object.assign(window.TRIP_HE, {
   "Optional coastal walk": "הליכת חוף לבחירה",
   "A longer coastal walk after the boat from Sfakia. Skip Kourtaliotiko if you choose this version.": "הליכת חוף ארוכה יותר אחרי הסירה מספאקיה. בחלופה זו מוותרים על קורטליוטיקו."
 });
+
+Object.assign(window.TRIP_HE, {
+  "Frangokastello fortress — optional coastal stop": "מבצר פרנגוקסטלו — עצירה אפשרית בדרך החוף",
+  "If driving from Sfakia to Plakias via the coastal road, stop for 20–30 minutes to see the Venetian fortress from outside. Interior access and opening hours are unconfirmed. An optional short stop, not another hike; skip it if tired after the coast.": "אם נוסעים מספאקיה לפלאקיאס בדרך החוף, אפשר לעצור ל־20–30 דקות ולראות את המבצר הוונציאני מבחוץ. הכניסה פנימה ושעות הפתיחה לא אומתו. עצירה קצרה לבחירה; אפשר לוותר אם עייפים אחרי יום החוף.",
+  "21 SEP · OPTIONAL": "21 בספטמבר · לבחירה",
+  "Visitor information ↗": "מידע על המקום ↗",
+  "Optional stop": "עצירה לבחירה",
+  "Frangokastello fortress": "מבצר פרנגוקסטלו",
+  "On the coastal drive to Plakias · allow 20–30 minutes outside; interior access unconfirmed": "בנסיעה בדרך החוף לפלאקיאס · כ־20–30 דקות מבחוץ; הכניסה פנימה לא אומתה"
+});

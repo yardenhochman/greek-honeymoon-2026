@@ -182,6 +182,7 @@ const tripDays = [
           ["Afternoon", "Boat to Sfakia", "Roughly 15 minutes; timetable and wind must be checked locally"],
           ["After the boat", "Retrieve the car", "Sfakia to Kourtaliotiko is roughly 40 km · about 55 minutes"],
           ["Optional", "Kourtaliotiko waterfall", "About 2 km return · allow 45–60 minutes plus any swim; recheck access rules"],
+          ["Optional stop", "Frangokastello fortress", "On the coastal drive to Plakias · allow 20–30 minutes outside; interior access unconfirmed"],
           ["Evening", "Drive to Plakias", "Roughly 20 km · 30 minutes, then check in and eat"]
         ]
       },
@@ -196,6 +197,7 @@ const tripDays = [
           ["11:15–13:00", "Swim and early lunch", "Rest before deciding on the exposed section"],
           ["13:00–14:30", "Glyka Nera to Sfakia", "About 3.5 km · 1h15–1h30 · exposed path and fixed cable"],
           ["Afternoon", "Retrieve the car", "Go directly toward Plakias; do not add another hike"],
+          ["Optional stop", "Frangokastello fortress", "On the coastal drive to Plakias · allow 20–30 minutes outside; interior access unconfirmed"],
           ["Evening", "Check in at Sofia Hotel", "Dinner and recovery in Plakias"]
         ]
       }
