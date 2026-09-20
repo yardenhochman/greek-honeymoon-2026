@@ -100,73 +100,63 @@ const tripDays = [
     ]
   },
   {
-    id: 4,
-    date: "Sun · 20 Sep",
-    shortDate: "20 Sep",
-    title: "A gorge, then the edge of Crete",
-    location: "Chania → Imbros → Lykos",
-    status: "Route choice",
-    color: "#718167",
-    summary: "The recommended route is Imbros: enough adventure, without spending the next day recovering.",
-    metrics: ["8–9 km hike", "2.5–3.5h trail", "Moderate"],
-    note: "Plan A is the recommendation. Carry trail shoes, sun protection and at least 1.5 litres of water each; confirm the Lykos boat before leaving Chania.",
-    stay: "Taverna Akrogiali · Lykos",
-    hotel: {
-      label: "Tonight",
-      name: "Taverna Akrogiali",
-      checkIn: "Sun 20 · from 14:00",
-      checkOut: "Mon 21 · 07:00–12:00",
-      room: "Deluxe Double · balcony + sea view",
-
-      note: "Coordinate the boat transfer with the property; timing and availability need confirmation"
-    },
-    mapsQuery: "Lykos Beach, Sfakia, Crete",
-    plans: [
-      {
-        id: "imbros",
-        label: "Plan A",
-        title: "Imbros Gorge",
-        note: "Balanced, scenic and much easier to fit around the transfer to Lykos.",
-        events: [
-          ["07:30", "Leave Chania", "About 60 km · allow 1h15–1h30 to Komitades"],
-          ["09:00", "Taxi to the trailhead", "Roughly 10–15 minutes; arrange the ride from Komitades"],
-          ["09:30–13:00", "Hike Imbros Gorge", "8–9 km · 2.5–3.5 hours · mostly descending, low exposure"],
-          ["13:00–15:00", "Lunch and continue to Sfakia", "Komitades to Sfakia is about 10 km · 15 minutes"],
-          ["Afternoon", "Park and boat to Lykos", "Confirm the sailing or property pickup in advance"],
-          ["Evening", "Dinner at Akrogiali", "Everything after arrival stays deliberately empty"]
-        ]
-      },
-      {
-        id: "aradena",
-        label: "Plan B",
-        title: "Aradena adventure",
-        note: "Only choose this after confirming the exact trail, transfer and boat logistics; it is the more technical, exposed day.",
-        events: [
-          ["07:00", "Leave Chania early", "Allow about 2 hours for the mountain road and setup"],
-          ["Morning", "Aradena route", "Roughly 10.5 km · estimate 4–5 hours for hikers · exposed sections"],
-          ["Afternoon", "Recover and reach Sfakia", "Build in food, transfer and a generous delay buffer"],
-          ["Late afternoon", "Boat to Lykos", "This plan only works with a confirmed late-enough connection"],
-          ["Evening", "Dinner and rest", "Expect this to feel like the trip’s hardest day"]
-        ]
-      }
-    ],
-    points: [
-      { name: "Chania", coords: [35.51554, 24.022812], type: "fixed" },
-      { name: "Imbros Gorge", coords: [35.227089, 24.164514], type: "fixed" },
-      { name: "Chora Sfakion", coords: [35.201331, 24.136091], type: "fixed" },
-      { name: "Lykos", coords: [35.200502, 24.06765], type: "fixed" }
-    ]
+  "id": 4,
+  "date": "Sun · 20 Sep",
+  "shortDate": "20 Sep",
+  "title": "Sfakia & Authentic Village",
+  "location": "Chora Sfakion",
+  "status": "Booked",
+  "color": "#718167",
+  "summary": "A relaxed afternoon in Sfakia, then check in at Authentic Village.",
+  "metrics": [
+    "Check-in 15:00–20:00",
+    "Free private parking",
+    "1 night"
+  ],
+  "note": "Reception closes at 20:00. Park behind Ntouroudous bakery and follow the Authentic signs.",
+  "stay": "The Authentic Village Boutique Hotel",
+  "hotel": {
+    "label": "Tonight",
+    "name": "The Authentic Village Boutique Hotel",
+    "checkIn": "Sun 20 · 15:00–20:00",
+    "checkOut": "Mon 21 · 08:00–11:00",
+    "room": "Deluxe Double Room with Balcony",
+    "note": "No meals included. Free private parking behind Ntouroudous bakery."
   },
+  "mapsQuery": "The Authentic Village Boutique Hotel Chora Sfakion",
+  "events": [
+    [
+      "15:00–20:00",
+      "Check in at Authentic Village",
+      "Reception closes at 20:00."
+    ],
+    [
+      "Evening",
+      "Dinner and rest in Sfakia",
+      "Keep the rest of the day flexible."
+    ]
+  ],
+  "points": [
+    {
+      "name": "Chora Sfakion",
+      "coords": [
+        35.201331,
+        24.136091
+      ],
+      "type": "fixed"
+    }
+  ]
+},
   {
     id: 5,
     date: "Mon · 21 Sep",
     shortDate: "21 Sep",
     title: "Coastal path, with a boat built in",
-    location: "Lykos → Glyka Nera → Plakias",
+    location: "Sfakia → coast → Plakias",
     status: "Flexible",
     color: "#4b8276",
     summary: "Walk as far as it feels good. The boat from Glyka Nera is part of the design.",
-    metrics: ["5.5–9 km walk", "2–3h trail", "Boat escape"],
+    metrics: ["Optional coastal walk", "2–3h trail", "Boat escape"],
     note: "Check wind and boat service that morning. The final Glyka Nera–Sfakia section is exposed and includes a fixed cable; taking the boat is the preferred relaxed option.",
     stay: "Sofia Hotel · Plakias",
     hotel: {
@@ -176,7 +166,7 @@ const tripDays = [
       checkOut: "Tue 22 · by 11:00",
       room: "Double or Twin Room",
 
-      note: "Breakfast included"
+      note: "Breakfast included. Free public parking 100 m away; see the day guide for the hotel’s parking pin."
     },
     mapsQuery: "Sofia Hotel, Plakias, Crete",
     plans: [
@@ -186,7 +176,7 @@ const tripDays = [
         title: "Walk, then boat",
         note: "Recommended: it keeps the beautiful section and removes the most exposed final stretch.",
         events: [
-          ["08:30", "Lykos to Loutro", "About 2.5 km · 40–60 minutes on foot, or roughly 10 minutes by boat"],
+          ["Morning", "Optional boat from Sfakia to Loutro", "Confirm the sailing and return locally; depart after checkout."],
           ["10:00–11:15", "Loutro to Glyka Nera", "About 2.8 km · roughly 1 hour on the E4 coastal path"],
           ["11:15–13:30", "Swim and lunch", "Allow 2 hours to enjoy the beach rather than only pass through"],
           ["Afternoon", "Boat to Sfakia", "Roughly 15 minutes; timetable and wind must be checked locally"],
@@ -199,9 +189,9 @@ const tripDays = [
         id: "trail",
         label: "Plan B",
         title: "Walk all the way",
-        note: "A 9 km coastal walking day before the drive. Skip Kourtaliotiko if you choose this version.",
+        note: "A longer coastal walk after the boat from Sfakia. Skip Kourtaliotiko if you choose this version.",
         events: [
-          ["08:30", "Lykos to Loutro", "About 2.5 km · 40–60 minutes on foot"],
+          ["Morning", "Optional boat from Sfakia to Loutro", "Confirm the sailing and return locally; depart after checkout."],
           ["10:00–11:15", "Loutro to Glyka Nera", "About 2.8 km · roughly 1 hour"],
           ["11:15–13:00", "Swim and early lunch", "Rest before deciding on the exposed section"],
           ["13:00–14:30", "Glyka Nera to Sfakia", "About 3.5 km · 1h15–1h30 · exposed path and fixed cable"],
@@ -211,7 +201,7 @@ const tripDays = [
       }
     ],
     points: [
-      { name: "Lykos", coords: [35.200502, 24.06765], type: "fixed" },
+
       { name: "Loutro", coords: [35.196645, 24.082879], type: "fixed" },
       { name: "Glyka Nera", coords: [35.201641, 24.106984], type: "flexible" },
       { name: "Chora Sfakion", coords: [35.201331, 24.136091], type: "fixed" },
@@ -237,7 +227,7 @@ const tripDays = [
       checkOut: "Wed 23 · 08:00–11:00",
       room: "Standard Double Room",
 
-      note: "Breakfast included"
+      note: "Breakfast included. Free public parking 100 m away; see the day guide for the hotel’s parking pin."
     },
     mapsQuery: "Astoria Hotel, Agia Galini, Crete",
     plans: [
@@ -476,7 +466,7 @@ const tripDays = [
 const stays = [
   ["17—18 Sep", "Poseidon Hotel", "Heraklion · late arrival approved", "1 night"],
   ["18—20 Sep", "Polixeny’s Suites", "Chania · property-confirmed dates", "2 nights"],
-  ["20—21 Sep", "Taverna Akrogiali", "Lykos · sea-view balcony", "1 night"],
+  ["20—21 Sep", "The Authentic Village Boutique Hotel", "Sfakia · balcony", "1 night"],
   ["21—22 Sep", "Sofia Hotel", "Plakias · breakfast included", "1 night"],
   ["22—23 Sep", "Astoria Hotel", "Agia Galini · breakfast included", "1 night"],
   ["23—24 Sep", "Athinaikon Hotel", "Heraklion · near the ferry port", "1 night"],

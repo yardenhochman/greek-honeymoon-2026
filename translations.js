@@ -1258,3 +1258,34 @@ window.TRIP_HE = {
   "Sirocco · pizza & pasta": "סירוקו · פיצה ופסטה",
   "Scheduled time has passed; not a completion mark": "השעה המתוכננת חלפה; אין זה סימון שבוצע"
 };
+
+Object.assign(window.TRIP_HE, {
+  "Sfakia & Authentic Village": "ספאקיה ו־Authentic Village",
+  "Chora Sfakion": "ספאקיה",
+  "A relaxed afternoon in Sfakia, then check in at Authentic Village.": "אחר צהריים רגוע בספאקיה וצ׳ק־אין ב־Authentic Village.",
+  "Check-in 15:00–20:00": "צ׳ק־אין 15:00–20:00",
+  "Free private parking": "חניה פרטית בחינם",
+  "1 night": "לילה אחד",
+  "Reception closes at 20:00. Park behind Ntouroudous bakery and follow the Authentic signs.": "הקבלה נסגרת ב־20:00. חונים מאחורי מאפיית Ntouroudous ועוקבים אחר השילוט Authentic.",
+  "No meals included. Free private parking behind Ntouroudous bakery.": "ללא ארוחות. חניה פרטית חינם מאחורי מאפיית Ntouroudous.",
+  "Deluxe Double Room with Balcony": "חדר דלוקס זוגי עם מרפסת",
+  "Sun 20 · 15:00–20:00": "ראשון 20 · 15:00–20:00",
+  "Mon 21 · 08:00–11:00": "שני 21 · 08:00–11:00",
+  "Check in at Authentic Village": "צ׳ק־אין ב־Authentic Village",
+  "Reception closes at 20:00.": "הקבלה נסגרת ב־20:00.",
+  "Dinner and rest in Sfakia": "ארוחת ערב ומנוחה בספאקיה",
+  "Keep the rest of the day flexible.": "יתר היום גמיש.",
+  "Sfakia → coast → Plakias": "ספאקיה ← החוף ← פלאקיאס",
+  "Optional boat from Sfakia to Loutro": "אפשרות לסירה מספאקיה ללוטרו",
+  "Confirm the sailing and return locally; depart after checkout.": "לברר מקומית הפלגה וחזרה; יוצאים לאחר הצ׳ק־אאוט.",
+  "Sfakia · balcony": "ספאקיה · מרפסת",
+  "Breakfast included. Free public parking 100 m away; see the day guide for the hotel’s parking pin.": "ארוחת בוקר כלולה. חניה ציבורית חינם במרחק 100 מטר; קישור במדריך היום.",
+  "Check-in 15:00–20:00; reception closes at 20:00. Checkout 08:00–11:00.": "צ׳ק־אין 15:00–20:00; הקבלה נסגרת ב־20:00. צ׳ק־אאוט 08:00–11:00.",
+  "Park behind the bakery and follow the Authentic signs.": "חונים מאחורי המאפייה ועוקבים אחר השילוט Authentic.",
+  "Free public parking 100 m from Sofia, confirmed by the hotel on 20 September.": "חניה ציבורית חינם כ־100 מטר מ־Sofia, לפי אישור המלון ב־20 בספטמבר.",
+  "Sofia parking ↗": "חניה ליד Sofia ↗",
+  "Phone, travel documents and overnight luggage.": "טלפון, מסמכי נסיעה ותיק ללילה.",
+  "Start in Sfakia; optional coastal outing before driving to Plakias.": "יוצאים מספאקיה; טיול חוף אפשרי לפני הנסיעה לפלאקיאס.",
+  "Optional coastal walk": "הליכת חוף לבחירה",
+  "A longer coastal walk after the boat from Sfakia. Skip Kourtaliotiko if you choose this version.": "הליכת חוף ארוכה יותר אחרי הסירה מספאקיה. בחלופה זו מוותרים על קורטליוטיקו."
+});
